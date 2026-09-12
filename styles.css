@@ -278,6 +278,28 @@ img, svg { max-width: 100%; }
 .footer-bottom { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; padding-top: 22px; font-size: 0.88rem; }
 .footer-bottom p { margin: 0; }
 
+/* ---------- Partners ---------- */
+.partners-row { display: flex; justify-content: center; margin-top: 36px; }
+.partner {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  padding: 20px 34px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--white);
+  color: var(--navy-800);
+  font-family: "Sora", sans-serif;
+  font-weight: 700;
+  font-size: 1.45rem;
+  letter-spacing: -0.01em;
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(11, 31, 58, 0.06);
+  transition: transform 0.2s var(--ease), box-shadow 0.2s var(--ease);
+}
+.partner:hover { transform: translateY(-3px); box-shadow: 0 12px 30px rgba(11, 31, 58, 0.12); }
+.partner-mark { width: 46px; height: 46px; flex: none; }
+
 /* ---------- Reveal animation ---------- */
 .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.7s var(--ease), transform 0.7s var(--ease); }
 .reveal.in { opacity: 1; transform: none; }

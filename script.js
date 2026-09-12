@@ -72,7 +72,7 @@
       // No backend is wired up yet. This simulates a successful send.
       // To make it live, connect this to a form service (Formspree, Netlify
       // Forms, your own API, etc.) — see the note in this file.
-      setStatus("Thanks, " + name + "! Your message has been received — we'll be in touch within one business day.", "ok");
+      setStatus("Thanks, " + name + "! Your message has been received. We'll be in touch within one business day.", "ok");
       form.reset();
     });
   }

@@ -267,6 +267,21 @@ img, svg { max-width: 100%; }
 .form-status.ok { color: #0f9d58; }
 .form-status.err { color: #d23f31; }
 
+/* ---------- Contact card ---------- */
+.contact-card {
+  background: var(--navy-800);
+  color: var(--white);
+  border-radius: 18px;
+  padding: 40px 34px;
+  align-self: start;
+  box-shadow: 0 12px 30px rgba(11, 31, 58, 0.14);
+}
+.contact-card-eyebrow { text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.72rem; font-weight: 600; color: var(--sky); }
+.contact-card-name { font-family: "Sora", sans-serif; font-size: 1.6rem; font-weight: 700; color: var(--white); margin: 14px 0 2px; }
+.contact-card-role { color: #aebccf; margin: 0 0 26px; }
+.contact-card .btn-full { width: 100%; }
+.contact-card-email { display: inline-block; margin-top: 16px; color: var(--sky); font-size: 0.95rem; word-break: break-all; }
+
 /* ---------- Footer ---------- */
 .site-footer { background: var(--navy-900); color: #aebccf; padding: 56px 0 28px; }
 .footer-inner { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 28px; padding-bottom: 28px; border-bottom: 1px solid rgba(255, 255, 255, 0.1); }

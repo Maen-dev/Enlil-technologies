@@ -363,9 +363,9 @@ img, svg { max-width: 100%; }
    Logos are used exactly as supplied. Never recreate, recolour,
    crop or pair them with another mark.
    ============================================================ */
-.brand-logo { height: 34px; width: auto; display: block; }
+.brand-logo { height: 46px; width: auto; display: block; }
 .footer-logo { height: 44px; width: auto; display: block; margin-bottom: 14px; border-radius: 6px; }
-@media (max-width: 720px) { .brand-logo { height: 28px; } }
+@media (max-width: 720px) { .brand-logo { height: 36px; } }
 
 .hero .eyebrow { color: var(--sage); }
 

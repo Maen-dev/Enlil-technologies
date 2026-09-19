@@ -402,11 +402,13 @@ img, svg { max-width: 100%; }
 .site-footer .brand-stamp { background: var(--white); color: var(--forest-800); }
 
 /* Primary call to action needs to lift off the forest hero */
-.hero .btn-primary {
+.hero .btn-primary,
+.contact-card .btn-primary {
   background: var(--sage);
   color: var(--forest-900);
 }
-.hero .btn-primary:hover {
+.hero .btn-primary:hover,
+.contact-card .btn-primary:hover {
   background: #bcd9c5;
   box-shadow: 0 14px 30px -12px rgba(170, 204, 181, 0.5);
 }

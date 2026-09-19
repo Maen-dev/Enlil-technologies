@@ -156,8 +156,8 @@ img, svg { max-width: 100%; }
   left: 0; top: 8px;
   width: 9px; height: 9px;
   border-radius: 50%;
-  background: var(--green);
-  box-shadow: 0 0 0 4px rgba(67, 93, 75, 0.16);
+  background: var(--sage);
+  box-shadow: 0 0 0 4px rgba(170, 204, 181, 0.22);
 }
 
 /* ---------- Sections ---------- */
@@ -400,3 +400,13 @@ img, svg { max-width: 100%; }
 .site-footer .brand-name { color: var(--white); }
 .site-footer .brand-sub { color: #c5d8cb; }
 .site-footer .brand-stamp { background: var(--white); color: var(--forest-800); }
+
+/* Primary call to action needs to lift off the forest hero */
+.hero .btn-primary {
+  background: var(--sage);
+  color: var(--forest-900);
+}
+.hero .btn-primary:hover {
+  background: #bcd9c5;
+  box-shadow: 0 14px 30px -12px rgba(170, 204, 181, 0.5);
+}

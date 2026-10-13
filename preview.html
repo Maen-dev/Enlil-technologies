@@ -8,8 +8,8 @@
   <meta name="description" content="EnLil Technologies builds artificial intelligence that belongs to the business using it, together with the infrastructure and governance beneath it." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles-v2.css?v=1" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..500;1,9..144,300..400&family=Inter:wght@400;450;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles-v2.css?v=3" />
   <link rel="icon" type="image/png" href="assets/favicon.png" />
 </head>
 <body>
@@ -21,16 +21,13 @@
       <img class="brand-logo" src="assets/enlil-logo-primary.png" alt="EnLil Technologies" />
     </a>
     <nav class="main-nav" id="main-nav" aria-label="Primary">
-      <a href="#why">Why EnLil</a>
+      <a href="#principles">Principles</a>
       <a href="#services">Services</a>
-      <a href="#process">How we work</a>
+      <a href="#process">Process</a>
       <a href="#about">About</a>
     </nav>
     <div class="nav-actions">
-      <a href="#contact" class="btn btn-primary">
-        Get in touch
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-      </a>
+      <a href="#contact" class="btn btn-outline">Get in touch</a>
       <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
@@ -41,193 +38,205 @@
 <!-- ================= HERO ================= -->
 <section class="hero">
   <div class="container">
-    <span class="pill">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h8l-1 8 10-12h-8z"/></svg>
-      In partnership with Prax Labs
-    </span>
-    <h1>Intelligent systems your business <span class="accent">actually owns</span>.</h1>
-    <p class="hero-lead">
-      We modernise the technology you run on and build artificial intelligence trained on your own data,
-      kept behind your own walls, and yours to keep. Enterprise grade technology, made to belong to you.
-    </p>
-    <div class="hero-actions">
-      <a href="#contact" class="btn btn-primary">
-        Start a project
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-      </a>
-      <a href="#services" class="btn btn-ghost">Explore our services</a>
+    <p class="eyebrow">AI Transformation and Digital Infrastructure</p>
+    <h1>Intelligent systems your business <em>actually owns</em>.</h1>
+
+    <div class="hero-grid">
+      <div></div>
+      <div>
+        <p class="hero-lead">
+          We modernise the technology you run on and build artificial intelligence trained on your own
+          data, kept behind your own walls, and yours to keep.
+        </p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn">
+            Start a project
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a href="#services" class="link">
+            Explore our services
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+      </div>
     </div>
-    <ul class="hero-trust">
-      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/></svg> Sovereign AI you own</li>
-      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="6" rx="8" ry="3"/><path d="M4 6v12c0 1.7 3.6 3 8 3s8-1.3 8-3V6"/></svg> Built on your data</li>
-      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 018 0v3"/></svg> Security by design</li>
-      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> No lock in, ever</li>
-    </ul>
+
+    <div class="hero-marks">
+      <div><span class="n">I</span><span class="t">Sovereign AI you own</span></div>
+      <div><span class="n">II</span><span class="t">Built on your data</span></div>
+      <div><span class="n">III</span><span class="t">Security by design</span></div>
+      <div><span class="n">IV</span><span class="t">No lock in, ever</span></div>
+    </div>
   </div>
 </section>
 
-<!-- ================= PARTNER STRIP ================= -->
-<section class="strip">
+<!-- ================= PARTNER ================= -->
+<section class="partner-line">
   <div class="container">
-    <p class="strip-label">Built with our technology partner</p>
-    <div class="strip-row">
-      <a class="partner" href="https://prax-labs.com/" target="_blank" rel="noopener">
-        <svg viewBox="0 0 40 40" fill="none" width="34" height="34" aria-hidden="true">
-          <circle cx="20" cy="14" r="9" stroke="#f0b429" stroke-width="3.4"/>
-          <circle cx="13.5" cy="25" r="9" stroke="#4a90e2" stroke-width="3.4"/>
-          <circle cx="26.5" cy="25" r="9" stroke="#d65a4a" stroke-width="3.4"/>
-        </svg>
-        <span>
-          <span class="partner-name">Prax Labs</span><br />
-          <span class="partner-sub">OraBrain sovereign AI platform</span>
-        </span>
-      </a>
-    </div>
+    <span class="label">Built with our technology partner</span>
+    <a class="partner-mark" href="https://prax-labs.com/" target="_blank" rel="noopener">
+      <svg viewBox="0 0 40 40" fill="none" width="36" height="36" aria-hidden="true">
+        <circle cx="20" cy="14" r="9" stroke="#f0b429" stroke-width="3.2"/>
+        <circle cx="13.5" cy="25" r="9" stroke="#4a90e2" stroke-width="3.2"/>
+        <circle cx="26.5" cy="25" r="9" stroke="#d65a4a" stroke-width="3.2"/>
+      </svg>
+      <span>
+        <span class="name">Prax Labs</span><br />
+        <span class="sub">OraBrain sovereign AI platform</span>
+      </span>
+    </a>
   </div>
 </section>
 
-<!-- ================= WHY ================= -->
-<section class="section" id="why">
+<!-- ================= PRINCIPLES ================= -->
+<section class="section" id="principles">
   <div class="container">
     <div class="section-head reveal">
-      <p class="section-eyebrow">Why EnLil</p>
-      <h2>The advantages of a true <span class="accent">technology partner</span></h2>
-      <p>We start with how your business actually works, then build the technology that serves it.</p>
+      <p class="eyebrow">Why EnLil</p>
+      <h2>The advantages of a true <em>technology partner</em></h2>
+      <p>We begin with how your business actually works, then build the technology that serves it.</p>
     </div>
-    <div class="cards">
-      <article class="card reveal">
-        <div class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
-        <h3>Business first thinking</h3>
-        <p>We start with your goals, not a technology checklist. Every recommendation ties back to measurable business value.</p>
-      </article>
-      <article class="card reveal">
-        <div class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2"/><circle cx="9.5" cy="7" r="4"/><path d="M22 21v-2a4 4 0 00-3-3.9"/></svg></div>
-        <h3>One accountable team</h3>
-        <p>Strategy, build and support under one roof. No finger pointing between vendors when something needs attention.</p>
-      </article>
-      <article class="card reveal">
-        <div class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/><path d="M9.5 12l2 2 3.5-4"/></svg></div>
-        <h3>Security and reliability</h3>
-        <p>We design for uptime and protect your data from the first line of code to the last server in production.</p>
-      </article>
-      <article class="card reveal">
-        <div class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 018 0"/></svg></div>
-        <h3>Yours to own, no lock in</h3>
-        <p>The systems and AI we build belong to you: your data, your models, your infrastructure. Keep us, or run it yourself.</p>
-      </article>
-      <article class="card reveal">
-        <div class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l2-7 4 14 2-7h6"/></svg></div>
-        <h3>Processes before platforms</h3>
-        <p>We study how the work really happens and redesign it first, so the software you end up with solves the right problem.</p>
-      </article>
-      <article class="card reveal">
-        <div class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M2 12h4M18 12h4M5 5l3 3M16 16l3 3M19 5l-3 3M8 16l-3 3"/></svg></div>
-        <h3>Governed from day one</h3>
-        <p>Every model we build is documented, testable and explainable, so it stands up to your board and your regulator.</p>
-      </article>
+
+    <div class="ed-item reveal">
+      <span class="ed-num">01</span>
+      <h3>Business first thinking</h3>
+      <p>We start with your goals, not a technology checklist. Every recommendation ties back to measurable business value, and we will tell you when the answer is not more software.</p>
     </div>
+    <div class="ed-item reveal">
+      <span class="ed-num">02</span>
+      <h3>Processes before platforms</h3>
+      <p>Most failed technology projects are process problems wearing a technical disguise. We study how the work really happens and redesign it first, so what we build solves the right problem.</p>
+    </div>
+    <div class="ed-item reveal">
+      <span class="ed-num">03</span>
+      <h3>One accountable team</h3>
+      <p>Strategy, build and support under a single roof. There is no distance between the people who propose the work and the people who deliver it, and no finger pointing between vendors.</p>
+    </div>
+    <div class="ed-item reveal">
+      <span class="ed-num">04</span>
+      <h3>Security and reliability</h3>
+      <p>We design for uptime and protect your data from the first line of code to the last server in production. Security is a condition of the work, not a phase at the end of it.</p>
+    </div>
+    <div class="ed-item reveal">
+      <span class="ed-num">05</span>
+      <h3>Governed from the first day</h3>
+      <p>Every model we build is documented, testable and explainable, so it stands up to your board, your auditor and your regulator without a scramble.</p>
+    </div>
+    <div class="ed-item reveal">
+      <span class="ed-num">06</span>
+      <h3>Yours to own, no lock in</h3>
+      <p>The systems and intelligence we build belong to you: your data, your models, your infrastructure. Keep us as your partner, or take the keys and run it yourself.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= BAND ================= -->
+<section class="band">
+  <div class="container">
+    <blockquote class="reveal">Intelligence is the one thing a company should never rent.</blockquote>
+    <p class="attrib reveal">The EnLil position</p>
   </div>
 </section>
 
 <!-- ================= SERVICES ================= -->
-<section class="section section-tint" id="services">
+<section class="section" id="services">
   <div class="container">
     <div class="section-head reveal">
-      <p class="section-eyebrow">What we do</p>
-      <h2>Four services, <span class="accent">one accountable partner</span></h2>
-      <p>From strategy to support, we cover the full lifecycle so you can focus on running your business.</p>
+      <p class="eyebrow">What we do</p>
+      <h2>Four services, <em>one accountable partner</em></h2>
+      <p>From strategy to support, we cover the full lifecycle so you can concentrate on running your business.</p>
     </div>
 
-    <div class="row reveal">
-      <div class="row-copy">
-        <span class="pill">AI that belongs to you</span>
+    <div class="srow reveal">
+      <div class="srow-copy">
+        <span class="idx">Service I</span>
         <h3>AI Transformation</h3>
-        <p>We bring AI into the heart of how you operate, and build you a sovereign AI: a model specialised on your own data, running under your control, that becomes an asset you own rather than a service you rent.</p>
+        <p>We bring artificial intelligence into the heart of how you operate, and build you a sovereign AI: a model specialised on your own data, running under your control, that becomes an asset you own rather than a service you rent.</p>
         <ul class="ticks">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Sovereign AI trained on your own data</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Intelligent automation and decision support</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> AI strategy and readiness assessment</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Models and agents you own and control</li>
+          <li>Sovereign AI trained on your own data</li>
+          <li>Intelligent automation and decision support</li>
+          <li>AI strategy and readiness assessment</li>
+          <li>Models and agents you own and control</li>
         </ul>
       </div>
-      <div class="row-visual">
-        <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-          <g fill="none" stroke="rgba(255,255,255,0.22)" stroke-width="1.6">
-            <path d="M200 60l52 30v60l-52 30-52-30V90z"/>
-            <path d="M200 90v120M148 120l52 30 52-30"/>
-            <circle cx="200" cy="60" r="6" fill="rgba(170,204,181,0.9)" stroke="none"/>
-            <circle cx="252" cy="90" r="5" fill="rgba(170,204,181,0.6)" stroke="none"/>
-            <circle cx="148" cy="90" r="5" fill="rgba(170,204,181,0.6)" stroke="none"/>
-            <circle cx="200" cy="210" r="6" fill="rgba(170,204,181,0.9)" stroke="none"/>
+      <div class="srow-art">
+        <svg viewBox="0 0 400 320" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <g fill="none" stroke="rgba(221,236,226,0.3)" stroke-width="1">
+            <path d="M200 76l62 36v72l-62 36-62-36v-72z"/>
+            <path d="M200 112v108M138 148l62 36 62-36"/>
+          </g>
+          <g fill="rgba(170,204,181,0.85)">
+            <circle cx="200" cy="76" r="4.5"/><circle cx="262" cy="112" r="3.5"/>
+            <circle cx="138" cy="112" r="3.5"/><circle cx="200" cy="220" r="4.5"/>
           </g>
         </svg>
       </div>
     </div>
 
-    <div class="row reverse reveal">
-      <div class="row-copy">
-        <span class="pill">The backbone beneath</span>
+    <div class="srow reverse reveal">
+      <div class="srow-copy">
+        <span class="idx">Service II</span>
         <h3>Digital Infrastructure</h3>
         <p>The secure, modern backbone your business runs on: cloud, networks, data and automated workflows, designed so everything connects, scales and stays yours.</p>
         <ul class="ticks">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Cloud and network architecture</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Data platforms and integration</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Systems and workflow automation</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Reliable, scalable foundations you own</li>
+          <li>Cloud and network architecture</li>
+          <li>Data platforms and integration</li>
+          <li>Systems and workflow automation</li>
+          <li>Reliable, scalable foundations you own</li>
         </ul>
       </div>
-      <div class="row-visual alt">
-        <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-          <g fill="none" stroke="rgba(67,93,75,0.4)" stroke-width="1.6">
-            <rect x="110" y="70" width="180" height="42" rx="8"/>
-            <rect x="110" y="128" width="180" height="42" rx="8"/>
-            <rect x="110" y="186" width="180" height="42" rx="8"/>
-            <circle cx="134" cy="91" r="5" fill="rgba(67,93,75,0.55)" stroke="none"/>
-            <circle cx="134" cy="149" r="5" fill="rgba(67,93,75,0.55)" stroke="none"/>
-            <circle cx="134" cy="207" r="5" fill="rgba(67,93,75,0.55)" stroke="none"/>
+      <div class="srow-art pale">
+        <svg viewBox="0 0 400 320" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <g fill="none" stroke="rgba(67,93,75,0.32)" stroke-width="1">
+            <rect x="104" y="86" width="192" height="44"/>
+            <rect x="104" y="146" width="192" height="44"/>
+            <rect x="104" y="206" width="192" height="44"/>
+          </g>
+          <g fill="rgba(67,93,75,0.4)">
+            <circle cx="128" cy="108" r="4"/><circle cx="128" cy="168" r="4"/><circle cx="128" cy="228" r="4"/>
           </g>
         </svg>
       </div>
     </div>
 
-    <div class="row reveal">
-      <div class="row-copy">
-        <span class="pill">Built for your workflow</span>
-        <h3>Software and App Development</h3>
-        <p>Custom web and mobile applications built for your exact workflow, designed to integrate cleanly with the tools and data you already rely on.</p>
+    <div class="srow reveal">
+      <div class="srow-copy">
+        <span class="idx">Service III</span>
+        <h3>Software and Applications</h3>
+        <p>Custom web and mobile applications built for your exact workflow, designed to integrate cleanly with the tools and the data you already rely on.</p>
         <ul class="ticks">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Web and mobile application development</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> API design and system integration</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> User experience design and prototyping</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Ongoing product engineering</li>
+          <li>Web and mobile application development</li>
+          <li>API design and system integration</li>
+          <li>User experience design and prototyping</li>
+          <li>Ongoing product engineering</li>
         </ul>
       </div>
-      <div class="row-visual">
-        <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-          <g fill="none" stroke="rgba(255,255,255,0.22)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M150 110l-34 40 34 40M250 110l34 40-34 40M215 96l-30 108"/>
+      <div class="srow-art">
+        <svg viewBox="0 0 400 320" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <g fill="none" stroke="rgba(221,236,226,0.32)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M150 122l-38 38 38 38M250 122l38 38-38 38M218 104l-36 112"/>
           </g>
         </svg>
       </div>
     </div>
 
-    <div class="row reverse reveal">
-      <div class="row-copy">
-        <span class="pill">Secure from the start</span>
+    <div class="srow reverse reveal">
+      <div class="srow-copy">
+        <span class="idx">Service IV</span>
         <h3>Cloud and Cybersecurity</h3>
-        <p>Resilient cloud paired with security that is built in from day one, protecting your data, your customers and your reputation.</p>
+        <p>Resilient cloud paired with security that is built in from the first day, protecting your data, your customers and your reputation.</p>
         <ul class="ticks">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Cloud security and architecture</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Security audits and assessments</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Identity and access management</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Compliance, risk and threat response</li>
+          <li>Cloud security and architecture</li>
+          <li>Security audits and assessments</li>
+          <li>Identity and access management</li>
+          <li>Compliance, risk and threat response</li>
         </ul>
       </div>
-      <div class="row-visual alt">
-        <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-          <g fill="none" stroke="rgba(67,93,75,0.42)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M200 84l56 24v48c0 36-24 60-56 72-32-12-56-36-56-72v-48z"/>
-            <path d="M180 168l16 16 28-32"/>
+      <div class="srow-art pale">
+        <svg viewBox="0 0 400 320" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <g fill="none" stroke="rgba(67,93,75,0.34)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M200 86l62 26v54c0 40-26 66-62 80-36-14-62-40-62-80v-54z"/>
+            <path d="M178 176l17 17 30-34"/>
           </g>
         </svg>
       </div>
@@ -236,55 +245,53 @@
 </section>
 
 <!-- ================= PROCESS ================= -->
-<section class="section" id="process">
+<section class="section section-bone" id="process">
   <div class="container">
     <div class="section-head reveal">
-      <p class="section-eyebrow">How we work</p>
-      <h2>A clear path from <span class="accent">idea to impact</span></h2>
+      <p class="eyebrow">How we work</p>
+      <h2>A clear path from <em>idea to impact</em></h2>
     </div>
     <div class="steps">
-      <div class="step reveal"><span class="step-num">01</span><h3>Discover</h3><p>We learn your business, map your systems and identify where technology can create the most value.</p></div>
-      <div class="step reveal"><span class="step-num">02</span><h3>Design</h3><p>We craft a clear, practical roadmap and architecture: scoped, costed and prioritised.</p></div>
-      <div class="step reveal"><span class="step-num">03</span><h3>Deliver</h3><p>We build, migrate and integrate in focused iterations, keeping you involved every step of the way.</p></div>
-      <div class="step reveal"><span class="step-num">04</span><h3>Support</h3><p>We monitor, maintain and evolve your solution so it keeps performing long after launch.</p></div>
+      <div class="step reveal"><span class="n">01</span><h3>Discover</h3><p>We learn your business, map your systems and identify where technology can create the most value.</p></div>
+      <div class="step reveal"><span class="n">02</span><h3>Design</h3><p>We craft a clear, practical roadmap and architecture: scoped, costed and prioritised.</p></div>
+      <div class="step reveal"><span class="n">03</span><h3>Deliver</h3><p>We build, migrate and integrate in focused iterations, keeping you involved at every stage.</p></div>
+      <div class="step reveal"><span class="n">04</span><h3>Support</h3><p>We monitor, maintain and evolve your solution so it keeps performing long after launch.</p></div>
     </div>
   </div>
 </section>
 
 <!-- ================= ABOUT ================= -->
-<section class="section section-tint" id="about">
+<section class="section" id="about">
   <div class="container about">
     <div class="reveal">
-      <p class="section-eyebrow">Who we are</p>
-      <h2>A modern partner with an <span class="accent">ancient name</span></h2>
-      <p>In Mesopotamian mythology, Enlil was the force that set the world in motion. We took the name because that is our role for the businesses we serve: the force that gets transformation moving and keeps it running.</p>
-      <p>EnLil Technologies is an AI transformation and digital infrastructure firm. In partnership with Prax Labs, a Silicon Valley sovereign AI company, we build intelligent systems that stay yours: your data, your models, your infrastructure. We pair deep technical expertise with a genuine understanding of business goals, so the technology we deliver actually delivers results, and belongs to you.</p>
-      <a href="#contact" class="btn btn-primary">
+      <p class="eyebrow">Who we are</p>
+      <h2>A modern partner with an <em>ancient name</em></h2>
+      <p>In Mesopotamian mythology, Enlil was the force that set the world in motion. We took the name because that is our role for the businesses we serve: the force that gets transformation moving, and keeps it running.</p>
+      <p>EnLil Technologies is an AI transformation and digital infrastructure firm. In partnership with Prax Labs, a Silicon Valley sovereign AI company, we build intelligent systems that stay yours. We pair deep technical expertise with a genuine understanding of business goals, so the technology we deliver produces results and belongs to you.</p>
+      <a href="#contact" class="link">
         Work with us
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
       </a>
     </div>
-    <div class="stats reveal">
-      <div class="stat"><span class="stat-num">100%</span><span class="stat-label">Client first approach</span></div>
-      <div class="stat"><span class="stat-num">Yours</span><span class="stat-label">AI and systems you own</span></div>
-      <div class="stat"><span class="stat-num">End to end</span><span class="stat-label">Strategy to support</span></div>
-      <div class="stat"><span class="stat-num">Secure</span><span class="stat-label">By design, not afterthought</span></div>
+    <div class="facts reveal">
+      <div class="fact"><span class="fact-k">Client first</span><span class="fact-v">Your goals set the brief</span></div>
+      <div class="fact"><span class="fact-k">Yours</span><span class="fact-v">The AI and systems you own</span></div>
+      <div class="fact"><span class="fact-k">End to end</span><span class="fact-v">Strategy through to support</span></div>
+      <div class="fact"><span class="fact-k">Secure</span><span class="fact-v">By design, not afterthought</span></div>
     </div>
   </div>
 </section>
 
-<!-- ================= CTA ================= -->
-<section class="section" id="contact">
+<!-- ================= CLOSING ================= -->
+<section class="closing" id="contact">
   <div class="container">
-    <div class="cta-panel reveal">
-      <h2>Ready to own your intelligence?</h2>
-      <p>Tell us about your goals or challenges and we will get back to you within 8 business days. No obligation, just a conversation.</p>
-      <a href="#contact" class="btn btn-light">
-        Start the conversation
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-      </a>
-      <span class="cta-mail">info@enliltechnologies.com</span>
-    </div>
+    <h2>Ready to <em>own your intelligence</em>?</h2>
+    <p>Tell us about your goals or your challenges, and we will take it from there. No obligation, simply a conversation.</p>
+    <a href="#contact" class="btn btn-pale">
+      Start the conversation
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </a>
+    <span class="mail">info@enliltechnologies.com</span>
   </div>
 </section>
 
@@ -300,18 +307,18 @@
         <h4>Services</h4>
         <a href="#services">AI Transformation</a>
         <a href="#services">Digital Infrastructure</a>
-        <a href="#services">Software and Apps</a>
+        <a href="#services">Software and Applications</a>
         <a href="#services">Cloud and Cybersecurity</a>
       </div>
       <div class="footer-col">
         <h4>Company</h4>
+        <a href="#principles">Principles</a>
+        <a href="#process">Process</a>
         <a href="#about">About</a>
-        <a href="#why">Why EnLil</a>
-        <a href="#process">How we work</a>
         <a href="#contact">Contact</a>
       </div>
       <div class="footer-col">
-        <h4>Get in touch</h4>
+        <h4>Contact</h4>
         <a href="#contact">info@enliltechnologies.com</a>
         <a href="https://prax-labs.com/" target="_blank" rel="noopener">Prax Labs</a>
       </div>
@@ -333,9 +340,9 @@
   n.addEventListener('click', function (e) { if (e.target.tagName === 'A') n.classList.remove('open'); });
   var io = new IntersectionObserver(function (es) {
     es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
-  }, { threshold: 0.12 });
+  }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
   document.querySelectorAll('.reveal').forEach(function (el, i) {
-    el.style.transitionDelay = (i % 3) * 70 + 'ms';
+    el.style.transitionDelay = Math.min(i % 4, 3) * 90 + 'ms';
     io.observe(el);
   });
 </script>

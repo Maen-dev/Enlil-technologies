@@ -42,12 +42,11 @@ body::before {
 }
 
 h1, h2, h3, .display {
-  font-family: "Fraunces", Georgia, serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
+  font-family: "Sora", system-ui, sans-serif;
+    font-weight: 400;
   color: var(--ink);
   line-height: 1.08;
-  letter-spacing: -0.015em;
+  letter-spacing: -0.035em;
   margin: 0 0 0.5em;
 }
 p { margin: 0 0 1.2em; }
@@ -124,7 +123,7 @@ img, svg { max-width: 100%; display: block; }
   max-width: 15ch;
   margin-bottom: 0;
 }
-.hero h1 em { font-style: italic; color: var(--forest); font-weight: 400; }
+.hero h1 em { font-style: normal; color: var(--forest); font-weight: 400; }
 .hero-grid {
   display: grid; grid-template-columns: 1fr 0.78fr; gap: 80px; align-items: end;
   margin-top: 54px; padding-bottom: 64px;
@@ -134,7 +133,7 @@ img, svg { max-width: 100%; display: block; }
 .hero-marks { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--line); }
 .hero-marks div { padding: 30px 26px 46px 0; border-right: 1px solid var(--line-soft); }
 .hero-marks div:last-child { border-right: 0; }
-.hero-marks .n { font-family: "Fraunces", serif; font-size: 0.78rem; color: var(--forest); letter-spacing: 0.1em; display: block; margin-bottom: 10px; }
+.hero-marks .n { font-family: "Sora", system-ui, sans-serif; font-size: 0.78rem; color: var(--forest); letter-spacing: 0.1em; display: block; margin-bottom: 10px; }
 .hero-marks .t { font-size: 0.9rem; color: var(--ink); line-height: 1.5; }
 
 /* ---------- Sections ---------- */
@@ -142,7 +141,7 @@ img, svg { max-width: 100%; display: block; }
 .section-bone { background: var(--bone-deep); }
 .section-head { max-width: 780px; margin-bottom: 76px; }
 .section-head h2 { font-size: clamp(2rem, 4.2vw, 3.3rem); font-weight: 300; margin-bottom: 0.45em; }
-.section-head h2 em { font-style: italic; color: var(--forest); }
+.section-head h2 em { font-style: normal; color: var(--forest); font-weight: 400; }
 .section-head p { font-size: 1.05rem; margin: 0; max-width: 560px; }
 
 /* ---------- Partner line ---------- */
@@ -150,7 +149,7 @@ img, svg { max-width: 100%; display: block; }
 .partner-line .container { display: flex; align-items: center; justify-content: space-between; gap: 30px; flex-wrap: wrap; }
 .partner-line .label { font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.3em; color: var(--muted); }
 .partner-mark { display: inline-flex; align-items: center; gap: 16px; }
-.partner-mark .name { font-family: "Fraunces", serif; font-size: 1.35rem; color: var(--ink); }
+.partner-mark .name { font-family: "Sora", system-ui, sans-serif; font-size: 1.35rem; color: var(--ink); }
 .partner-mark .sub { font-size: 0.84rem; color: var(--muted); }
 
 /* ---------- Editorial numbered list ---------- */
@@ -160,7 +159,7 @@ img, svg { max-width: 100%; display: block; }
   transition: background 0.5s var(--ease);
 }
 .ed-item:last-child { border-bottom: 1px solid var(--line); }
-.ed-num { font-family: "Fraunces", serif; font-size: 0.92rem; color: var(--forest); letter-spacing: 0.08em; padding-top: 6px; }
+.ed-num { font-family: "Sora", system-ui, sans-serif; font-size: 0.92rem; color: var(--forest); letter-spacing: 0.08em; padding-top: 6px; }
 .ed-item h3 { font-size: 1.5rem; font-weight: 400; margin: 0; }
 .ed-item p { margin: 0; font-size: 1rem; }
 
@@ -169,7 +168,7 @@ img, svg { max-width: 100%; display: block; }
 .srow:first-of-type { border-top: 0; }
 .srow.reverse .srow-copy { order: 2; }
 .srow.reverse .srow-art { order: 1; }
-.srow .idx { font-family: "Fraunces", serif; font-size: 0.82rem; letter-spacing: 0.14em; color: var(--forest); display: block; margin-bottom: 22px; }
+.srow .idx { font-family: "Sora", system-ui, sans-serif; font-size: 0.82rem; letter-spacing: 0.14em; color: var(--forest); display: block; margin-bottom: 22px; }
 .srow h3 { font-size: clamp(1.7rem, 3vw, 2.5rem); font-weight: 300; margin-bottom: 0.5em; }
 .srow p { margin-bottom: 30px; }
 .ticks { list-style: none; padding: 0; margin: 0; }
@@ -187,7 +186,7 @@ img, svg { max-width: 100%; display: block; }
 }
 .band .container { position: relative; z-index: 2; }
 .band blockquote {
-  font-family: "Fraunces", serif; font-weight: 300; font-style: italic;
+  font-family: "Sora", system-ui, sans-serif; font-weight: 300; font-style: normal;
   font-size: clamp(1.75rem, 4.2vw, 3.1rem); line-height: 1.26; color: var(--white);
   margin: 0 auto; max-width: 17ch;
 }
@@ -196,25 +195,25 @@ img, svg { max-width: 100%; display: block; }
 /* ---------- Steps ---------- */
 .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; }
 .step { padding: 42px 34px 0 0; border-top: 1px solid var(--line); }
-.step .n { font-family: "Fraunces", serif; font-size: 0.82rem; letter-spacing: 0.14em; color: var(--forest); display: block; margin-bottom: 20px; }
+.step .n { font-family: "Sora", system-ui, sans-serif; font-size: 0.82rem; letter-spacing: 0.14em; color: var(--forest); display: block; margin-bottom: 20px; }
 .step h3 { font-size: 1.28rem; font-weight: 400; margin-bottom: 0.5em; }
 .step p { font-size: 0.95rem; margin: 0; }
 
 /* ---------- About ---------- */
 .about { display: grid; grid-template-columns: 1fr 0.85fr; gap: 90px; align-items: start; }
 .about h2 { font-size: clamp(2rem, 4vw, 3rem); font-weight: 300; }
-.about h2 em { font-style: italic; color: var(--forest); }
+.about h2 em { font-style: normal; color: var(--forest); font-weight: 400; }
 .facts { border-top: 1px solid var(--line); }
 .fact { padding: 26px 0; border-bottom: 1px solid var(--line-soft); display: flex; justify-content: space-between; align-items: baseline; gap: 20px; }
-.fact-k { font-family: "Fraunces", serif; font-size: 1.22rem; color: var(--forest); }
+.fact-k { font-family: "Sora", system-ui, sans-serif; font-size: 1.22rem; color: var(--forest); }
 .fact-v { font-size: 0.9rem; color: var(--muted); text-align: right; }
 
 /* ---------- Closing ---------- */
 .closing { background: var(--forest-deep); color: var(--sage-pale); padding: 150px 0; text-align: center; }
 .closing h2 { color: var(--white); font-size: clamp(2.1rem, 4.6vw, 3.5rem); font-weight: 300; margin-bottom: 0.5em; }
-.closing h2 em { font-style: italic; color: var(--sage); }
+.closing h2 em { font-style: normal; color: var(--sage); font-weight: 400; }
 .closing p { max-width: 520px; margin: 0 auto 44px; color: rgba(221, 236, 226, 0.78); }
-.closing .mail { display: block; margin-top: 34px; font-family: "Fraunces", serif; font-size: 1.22rem; color: var(--sage); }
+.closing .mail { display: block; margin-top: 34px; font-family: "Sora", system-ui, sans-serif; font-size: 1.22rem; color: var(--sage); }
 
 /* ---------- Footer ---------- */
 .site-footer { background: var(--forest); color: rgba(221, 236, 226, 0.68); padding: 84px 0 34px; font-size: 0.9rem; }

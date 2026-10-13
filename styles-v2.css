@@ -154,14 +154,14 @@ img, svg { max-width: 100%; display: block; }
 
 /* ---------- Editorial numbered list ---------- */
 .ed-item {
-  display: grid; grid-template-columns: 76px 1fr 1.15fr; gap: 34px;
-  padding: 34px 0; border-top: 1px solid var(--line);
+  display: grid; grid-template-columns: 66px 1fr 1.2fr; gap: 28px;
+  padding: 25px 0; border-top: 1px solid var(--line);
   transition: background 0.5s var(--ease);
 }
 .ed-item:last-child { border-bottom: 1px solid var(--line); }
-.ed-num { font-family: "Sora", system-ui, sans-serif; font-size: 0.92rem; color: var(--forest); letter-spacing: 0.08em; padding-top: 6px; }
-.ed-item h3 { font-size: 1.2rem; font-weight: 400; margin: 0; }
-.ed-item p { margin: 0; font-size: 0.93rem; }
+.ed-num { font-family: "Sora", system-ui, sans-serif; font-size: 0.82rem; color: var(--forest); letter-spacing: 0.08em; padding-top: 6px; }
+.ed-item h3 { font-size: 1.08rem; font-weight: 400; margin: 0; }
+.ed-item p { margin: 0; font-size: 0.89rem; }
 
 /* ---------- Service rows ---------- */
 .srow { display: grid; grid-template-columns: 1fr 1fr; gap: 90px; align-items: center; padding: 104px 0; border-top: 1px solid var(--line); }
@@ -194,10 +194,10 @@ img, svg { max-width: 100%; display: block; }
 
 /* ---------- Steps ---------- */
 .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; }
-.step { padding: 34px 28px 0 0; border-top: 1px solid var(--line); }
-.step .n { font-family: "Sora", system-ui, sans-serif; font-size: 0.82rem; letter-spacing: 0.14em; color: var(--forest); display: block; margin-bottom: 20px; }
-.step h3 { font-size: 1.08rem; font-weight: 400; margin-bottom: 0.5em; }
-.step p { font-size: 0.89rem; margin: 0; }
+.step { padding: 26px 24px 0 0; border-top: 1px solid var(--line); }
+.step .n { font-family: "Sora", system-ui, sans-serif; font-size: 0.76rem; letter-spacing: 0.14em; color: var(--forest); display: block; margin-bottom: 14px; }
+.step h3 { font-size: 1rem; font-weight: 400; margin-bottom: 0.5em; }
+.step p { font-size: 0.85rem; margin: 0; }
 
 /* ---------- About ---------- */
 .about { display: grid; grid-template-columns: 1fr 0.85fr; gap: 90px; align-items: start; }
@@ -515,7 +515,7 @@ img, svg { max-width: 100%; display: block; }
 .svc-rail::after { content: ""; flex: 0 0 8px; }
 
 .svc {
-  position: relative; flex: 0 0 360px; height: 455px; overflow: hidden;
+  position: relative; flex: 0 0 348px; height: 398px; overflow: hidden;
   scroll-snap-align: center; background: var(--forest); isolation: isolate;
 }
 .svc-art { position: absolute; inset: 0; background: var(--forest); }
@@ -527,26 +527,26 @@ img, svg { max-width: 100%; display: block; }
   position: absolute; left: 20px; right: 20px; bottom: 20px; z-index: 2;
   background: rgba(247, 246, 242, 0.95);
   -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
-  padding: 19px 21px; transition: transform 0.7s var(--ease);
+  padding: 16px 19px; transition: transform 0.7s var(--ease);
 }
 .svc-label {
   display: block; text-transform: uppercase; letter-spacing: 0.26em;
-  font-size: 0.62rem; font-weight: 500; color: var(--muted); margin-bottom: 12px;
+  font-size: 0.6rem; font-weight: 500; color: var(--muted); margin-bottom: 9px;
 }
-.svc-panel h3 { font-size: 1.16rem; font-weight: 400; margin: 0; color: var(--ink); }
+.svc-panel h3 { font-size: 1.08rem; font-weight: 400; margin: 0; color: var(--ink); }
 .svc-more {
   display: grid; grid-template-rows: 0fr; opacity: 0;
   transition: grid-template-rows 0.7s var(--ease), opacity 0.5s var(--ease);
 }
 .svc-more > div { overflow: hidden; }
 .svc:hover .svc-more, .svc:focus-within .svc-more { grid-template-rows: 1fr; opacity: 1; }
-.svc-more p { margin: 13px 0 0; font-size: 0.88rem; color: var(--body); }
-.svc-more .ticks { margin-top: 14px; }
-.svc-more .ticks li { display: flex; align-items: flex-start; gap: 9px; padding: 7px 0; font-size: 0.83rem; }
+.svc-more p { margin: 11px 0 0; font-size: 0.84rem; line-height: 1.6; color: var(--body); }
+.svc-more .ticks { margin-top: 10px; }
+.svc-more .ticks li { display: flex; align-items: flex-start; gap: 8px; padding: 5px 0; font-size: 0.8rem; }
 .svc-more .ticks li svg { width: 15px; height: 15px; color: var(--forest); flex: none; margin-top: 3px; }
 .svc-more .ticks li:hover { padding-left: 0; color: var(--ink); }
 
-@media (max-width: 1000px) { .svc { flex: 0 0 320px; height: 430px; } }
+@media (max-width: 1000px) { .svc { flex: 0 0 310px; height: 382px; } }
 @media (max-width: 760px) {
   .svc-head { display: block; }
   .rail-nav { display: none; }

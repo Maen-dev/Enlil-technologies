@@ -515,7 +515,7 @@ img, svg { max-width: 100%; display: block; }
 .svc-rail::after { content: ""; flex: 0 0 8px; }
 
 .svc {
-  position: relative; flex: 0 0 348px; height: 398px; overflow: hidden;
+  position: relative; flex: 0 0 348px; height: 366px; overflow: hidden;
   scroll-snap-align: center; background: var(--forest); isolation: isolate;
 }
 .svc-art { position: absolute; inset: 0; background: var(--forest); }
@@ -527,11 +527,11 @@ img, svg { max-width: 100%; display: block; }
   position: absolute; left: 20px; right: 20px; bottom: 20px; z-index: 2;
   background: rgba(247, 246, 242, 0.95);
   -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
-  padding: 16px 19px; transition: transform 0.7s var(--ease);
+  padding: 14px 18px; transition: transform 0.7s var(--ease);
 }
 .svc-label {
   display: block; text-transform: uppercase; letter-spacing: 0.26em;
-  font-size: 0.6rem; font-weight: 500; color: var(--muted); margin-bottom: 9px;
+  font-size: 0.6rem; font-weight: 500; color: var(--muted); margin-bottom: 7px;
 }
 .svc-panel h3 { font-size: 1.08rem; font-weight: 400; margin: 0; color: var(--ink); }
 .svc-more {
@@ -540,13 +540,13 @@ img, svg { max-width: 100%; display: block; }
 }
 .svc-more > div { overflow: hidden; }
 .svc:hover .svc-more, .svc:focus-within .svc-more { grid-template-rows: 1fr; opacity: 1; }
-.svc-more p { margin: 11px 0 0; font-size: 0.84rem; line-height: 1.6; color: var(--body); }
-.svc-more .ticks { margin-top: 10px; }
-.svc-more .ticks li { display: flex; align-items: flex-start; gap: 8px; padding: 5px 0; font-size: 0.8rem; }
+.svc-more p { margin: 10px 0 0; font-size: 0.84rem; line-height: 1.5; color: var(--body); }
+.svc-more .ticks { margin-top: 8px; }
+.svc-more .ticks li { display: flex; align-items: flex-start; gap: 8px; padding: 3px 0; font-size: 0.79rem; }
 .svc-more .ticks li svg { width: 15px; height: 15px; color: var(--forest); flex: none; margin-top: 3px; }
 .svc-more .ticks li:hover { padding-left: 0; color: var(--ink); }
 
-@media (max-width: 1000px) { .svc { flex: 0 0 310px; height: 382px; } }
+@media (max-width: 1000px) { .svc { flex: 0 0 306px; height: 356px; } }
 @media (max-width: 760px) {
   .svc-head { display: block; }
   .rail-nav { display: none; }

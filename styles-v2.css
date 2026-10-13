@@ -210,14 +210,14 @@ img, svg { max-width: 100%; display: block; }
 .fact-v { font-size: 0.9rem; color: var(--muted); text-align: right; }
 
 /* ---------- Closing ---------- */
-.closing { background: var(--forest); color: var(--sage-pale); padding: 150px 0; text-align: center; }
+.closing { background: var(--forest-deep); color: var(--sage-pale); padding: 150px 0; text-align: center; }
 .closing h2 { color: var(--white); font-size: clamp(2.1rem, 4.6vw, 3.5rem); font-weight: 300; margin-bottom: 0.5em; }
 .closing h2 em { font-style: italic; color: var(--sage); }
 .closing p { max-width: 520px; margin: 0 auto 44px; color: rgba(221, 236, 226, 0.78); }
 .closing .mail { display: block; margin-top: 34px; font-family: "Fraunces", serif; font-size: 1.22rem; color: var(--sage); }
 
 /* ---------- Footer ---------- */
-.site-footer { background: var(--forest-deep); color: rgba(221, 236, 226, 0.68); padding: 84px 0 34px; font-size: 0.9rem; }
+.site-footer { background: var(--forest); color: rgba(221, 236, 226, 0.68); padding: 84px 0 34px; font-size: 0.9rem; }
 .footer-grid { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: 48px; }
 .footer-logo { height: 46px; width: auto; margin-bottom: 22px; }
 .footer-brand p { max-width: 250px; margin: 0; }

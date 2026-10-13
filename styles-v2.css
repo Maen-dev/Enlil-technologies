@@ -27,8 +27,8 @@ html { scroll-behavior: smooth; scroll-padding-top: 100px; }
 body {
   margin: 0;
   font-family: "Inter", system-ui, -apple-system, sans-serif;
-  font-size: 1.0625rem;
-  line-height: 1.85;
+  font-size: 0.97rem;
+  line-height: 1.75;
   color: var(--body);
   background: var(--bone);
   -webkit-font-smoothing: antialiased;
@@ -128,7 +128,7 @@ img, svg { max-width: 100%; display: block; }
   display: grid; grid-template-columns: 1fr 0.78fr; gap: 80px; align-items: end;
   margin-top: 54px; padding-bottom: 64px;
 }
-.hero-lead { font-size: 1.08rem; color: var(--body); margin-bottom: 32px; }
+.hero-lead { font-size: 1rem; color: var(--body); margin-bottom: 32px; }
 .hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 28px; }
 .hero-marks { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--line); }
 .hero-marks div { padding: 30px 26px 46px 0; border-right: 1px solid var(--line-soft); }
@@ -137,31 +137,31 @@ img, svg { max-width: 100%; display: block; }
 .hero-marks .t { font-size: 0.9rem; color: var(--ink); line-height: 1.5; }
 
 /* ---------- Sections ---------- */
-.section { padding: 128px 0; }
+.section { padding: 104px 0; }
 .section-bone { background: var(--bone-deep); }
-.section-head { max-width: 780px; margin-bottom: 76px; }
+.section-head { max-width: 780px; margin-bottom: 56px; }
 .section-head h2 { font-size: clamp(2rem, 4.2vw, 3.3rem); font-weight: 300; margin-bottom: 0.45em; }
 .section-head h2 em { font-style: normal; color: var(--forest); font-weight: 400; }
-.section-head p { font-size: 1.05rem; margin: 0; max-width: 560px; }
+.section-head p { font-size: 0.98rem; margin: 0; max-width: 560px; }
 
 /* ---------- Partner line ---------- */
 .partner-line { padding: 46px 0; border-top: 1px solid var(--line-soft); border-bottom: 1px solid var(--line-soft); }
 .partner-line .container { display: flex; align-items: center; justify-content: space-between; gap: 30px; flex-wrap: wrap; }
 .partner-line .label { font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.3em; color: var(--muted); }
 .partner-mark { display: inline-flex; align-items: center; gap: 16px; }
-.partner-mark .name { font-family: "Sora", system-ui, sans-serif; font-size: 1.35rem; color: var(--ink); }
+.partner-mark .name { font-family: "Sora", system-ui, sans-serif; font-size: 1.12rem; color: var(--ink); }
 .partner-mark .sub { font-size: 0.84rem; color: var(--muted); }
 
 /* ---------- Editorial numbered list ---------- */
 .ed-item {
-  display: grid; grid-template-columns: 90px 1fr 1.15fr; gap: 44px;
-  padding: 44px 0; border-top: 1px solid var(--line);
+  display: grid; grid-template-columns: 76px 1fr 1.15fr; gap: 34px;
+  padding: 34px 0; border-top: 1px solid var(--line);
   transition: background 0.5s var(--ease);
 }
 .ed-item:last-child { border-bottom: 1px solid var(--line); }
 .ed-num { font-family: "Sora", system-ui, sans-serif; font-size: 0.92rem; color: var(--forest); letter-spacing: 0.08em; padding-top: 6px; }
-.ed-item h3 { font-size: 1.5rem; font-weight: 400; margin: 0; }
-.ed-item p { margin: 0; font-size: 1rem; }
+.ed-item h3 { font-size: 1.2rem; font-weight: 400; margin: 0; }
+.ed-item p { margin: 0; font-size: 0.93rem; }
 
 /* ---------- Service rows ---------- */
 .srow { display: grid; grid-template-columns: 1fr 1fr; gap: 90px; align-items: center; padding: 104px 0; border-top: 1px solid var(--line); }
@@ -172,14 +172,14 @@ img, svg { max-width: 100%; display: block; }
 .srow h3 { font-size: clamp(1.7rem, 3vw, 2.5rem); font-weight: 300; margin-bottom: 0.5em; }
 .srow p { margin-bottom: 30px; }
 .ticks { list-style: none; padding: 0; margin: 0; }
-.ticks li { padding: 13px 0; border-top: 1px solid var(--line-soft); font-size: 0.95rem; color: var(--ink); }
+.ticks li { padding: 11px 0; border-top: 1px solid var(--line-soft); font-size: 0.89rem; color: var(--ink); }
 .ticks li:last-child { border-bottom: 1px solid var(--line-soft); }
 .srow-art { aspect-ratio: 5 / 4; position: relative; overflow: hidden; background: var(--forest); }
 .srow-art.pale { background: var(--sage-pale); }
 .srow-art svg { position: absolute; inset: 0; width: 100%; height: 100%; }
 
 /* ---------- Statement band ---------- */
-.band { background: var(--forest-deep); color: var(--sage-pale); padding: 150px 0; text-align: center; position: relative; overflow: hidden; }
+.band { background: var(--forest-deep); color: var(--sage-pale); padding: 118px 0; text-align: center; position: relative; overflow: hidden; }
 .band::after {
   content: ""; position: absolute; inset: 0;
   background: radial-gradient(760px 420px at 50% 0%, rgba(170, 204, 181, 0.12), transparent 70%);
@@ -194,29 +194,29 @@ img, svg { max-width: 100%; display: block; }
 
 /* ---------- Steps ---------- */
 .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; }
-.step { padding: 42px 34px 0 0; border-top: 1px solid var(--line); }
+.step { padding: 34px 28px 0 0; border-top: 1px solid var(--line); }
 .step .n { font-family: "Sora", system-ui, sans-serif; font-size: 0.82rem; letter-spacing: 0.14em; color: var(--forest); display: block; margin-bottom: 20px; }
-.step h3 { font-size: 1.28rem; font-weight: 400; margin-bottom: 0.5em; }
-.step p { font-size: 0.95rem; margin: 0; }
+.step h3 { font-size: 1.08rem; font-weight: 400; margin-bottom: 0.5em; }
+.step p { font-size: 0.89rem; margin: 0; }
 
 /* ---------- About ---------- */
 .about { display: grid; grid-template-columns: 1fr 0.85fr; gap: 90px; align-items: start; }
 .about h2 { font-size: clamp(2rem, 4vw, 3rem); font-weight: 300; }
 .about h2 em { font-style: normal; color: var(--forest); font-weight: 400; }
 .facts { border-top: 1px solid var(--line); }
-.fact { padding: 26px 0; border-bottom: 1px solid var(--line-soft); display: flex; justify-content: space-between; align-items: baseline; gap: 20px; }
-.fact-k { font-family: "Sora", system-ui, sans-serif; font-size: 1.22rem; color: var(--forest); }
-.fact-v { font-size: 0.9rem; color: var(--muted); text-align: right; }
+.fact { padding: 20px 0; border-bottom: 1px solid var(--line-soft); display: flex; justify-content: space-between; align-items: baseline; gap: 20px; }
+.fact-k { font-family: "Sora", system-ui, sans-serif; font-size: 1.05rem; color: var(--forest); }
+.fact-v { font-size: 0.86rem; color: var(--muted); text-align: right; }
 
 /* ---------- Closing ---------- */
-.closing { background: var(--forest-deep); color: var(--sage-pale); padding: 150px 0; text-align: center; }
+.closing { background: var(--forest-deep); color: var(--sage-pale); padding: 118px 0; text-align: center; }
 .closing h2 { color: var(--white); font-size: clamp(2.1rem, 4.6vw, 3.5rem); font-weight: 300; margin-bottom: 0.5em; }
 .closing h2 em { font-style: normal; color: var(--sage); font-weight: 400; }
 .closing p { max-width: 520px; margin: 0 auto 44px; color: rgba(221, 236, 226, 0.78); }
-.closing .mail { display: block; margin-top: 34px; font-family: "Sora", system-ui, sans-serif; font-size: 1.22rem; color: var(--sage); }
+.closing .mail { display: block; margin-top: 30px; font-family: "Sora", system-ui, sans-serif; font-size: 1.05rem; color: var(--sage); }
 
 /* ---------- Footer ---------- */
-.site-footer { background: var(--forest); color: rgba(221, 236, 226, 0.68); padding: 84px 0 34px; font-size: 0.9rem; }
+.site-footer { background: var(--forest); color: rgba(221, 236, 226, 0.68); padding: 64px 0 30px; font-size: 0.86rem; }
 .footer-grid { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: 48px; }
 .footer-logo { height: 46px; width: auto; margin-bottom: 22px; }
 .footer-brand p { max-width: 250px; margin: 0; }
@@ -506,7 +506,7 @@ img, svg { max-width: 100%; display: block; }
 .rail-btn:hover:not(:disabled) { background: var(--forest); border-color: var(--forest); color: var(--white); }
 .rail-btn:disabled { opacity: 0.3; cursor: default; }
 
-.svc-rail-wrap { margin-top: 54px; }
+.svc-rail-wrap { margin-top: 40px; }
 .svc-rail {
   display: flex; gap: 24px; overflow-x: auto; scroll-snap-type: x mandatory;
   padding: 4px 32px 28px; scrollbar-width: none; -webkit-overflow-scrolling: touch;
@@ -515,7 +515,7 @@ img, svg { max-width: 100%; display: block; }
 .svc-rail::after { content: ""; flex: 0 0 8px; }
 
 .svc {
-  position: relative; flex: 0 0 440px; height: 560px; overflow: hidden;
+  position: relative; flex: 0 0 360px; height: 455px; overflow: hidden;
   scroll-snap-align: center; background: var(--forest); isolation: isolate;
 }
 .svc-art { position: absolute; inset: 0; background: var(--forest); }
@@ -527,26 +527,26 @@ img, svg { max-width: 100%; display: block; }
   position: absolute; left: 20px; right: 20px; bottom: 20px; z-index: 2;
   background: rgba(247, 246, 242, 0.95);
   -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
-  padding: 24px 26px; transition: transform 0.7s var(--ease);
+  padding: 19px 21px; transition: transform 0.7s var(--ease);
 }
 .svc-label {
   display: block; text-transform: uppercase; letter-spacing: 0.26em;
   font-size: 0.62rem; font-weight: 500; color: var(--muted); margin-bottom: 12px;
 }
-.svc-panel h3 { font-size: 1.45rem; font-weight: 400; margin: 0; color: var(--ink); }
+.svc-panel h3 { font-size: 1.16rem; font-weight: 400; margin: 0; color: var(--ink); }
 .svc-more {
   display: grid; grid-template-rows: 0fr; opacity: 0;
   transition: grid-template-rows 0.7s var(--ease), opacity 0.5s var(--ease);
 }
 .svc-more > div { overflow: hidden; }
 .svc:hover .svc-more, .svc:focus-within .svc-more { grid-template-rows: 1fr; opacity: 1; }
-.svc-more p { margin: 16px 0 0; font-size: 0.94rem; color: var(--body); }
+.svc-more p { margin: 13px 0 0; font-size: 0.88rem; color: var(--body); }
 .svc-more .ticks { margin-top: 14px; }
-.svc-more .ticks li { display: flex; align-items: flex-start; gap: 10px; padding: 9px 0; font-size: 0.89rem; }
+.svc-more .ticks li { display: flex; align-items: flex-start; gap: 9px; padding: 7px 0; font-size: 0.83rem; }
 .svc-more .ticks li svg { width: 15px; height: 15px; color: var(--forest); flex: none; margin-top: 3px; }
 .svc-more .ticks li:hover { padding-left: 0; color: var(--ink); }
 
-@media (max-width: 1000px) { .svc { flex: 0 0 380px; height: 520px; } }
+@media (max-width: 1000px) { .svc { flex: 0 0 320px; height: 430px; } }
 @media (max-width: 760px) {
   .svc-head { display: block; }
   .rail-nav { display: none; }

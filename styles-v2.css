@@ -321,8 +321,11 @@ img, svg { max-width: 100%; display: block; }
 .ed-item:hover .ed-num { transform: translateX(6px); }
 
 /* service art: wipe in, parallax, hover scale */
-.srow-art { clip-path: inset(0 0 100% 0); transition: clip-path 1.3s var(--ease); }
-.srow-art.in { clip-path: inset(0 0 0 0); }
+.srow-art::after {
+  content: ""; position: absolute; inset: 0; z-index: 3; background: var(--bone);
+  transform: translateY(0); transition: transform 1.15s var(--ease);
+}
+.srow.in .srow-art::after, .srow-art.in::after { transform: translateY(-101%); }
 .srow-art svg { transition: transform 1.1s var(--ease); will-change: transform; }
 .srow-art:hover svg { transform: scale(1.07); }
 
@@ -347,6 +350,6 @@ img, svg { max-width: 100%; display: block; }
 @media (prefers-reduced-motion: reduce) {
   * { animation: none !important; transition-duration: 0.01ms !important; }
   .w > span, .mask > span { transform: none !important; opacity: 1 !important; }
-  .srow-art { clip-path: none !important; }
+  .srow-art::after { display: none !important; }
   .cursor { display: none; }
 }

@@ -9,10 +9,12 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..500;1,9..144,300..400&family=Inter:wght@400;450;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles-v2.css?v=4" />
+  <link rel="stylesheet" href="styles-v2.css?v=5" />
   <link rel="icon" type="image/png" href="assets/favicon.png" />
 </head>
 <body>
+<div class="progress" id="progress"></div>
+<div class="cursor" id="cursor"></div>
 
 <!-- ================= HEADER ================= -->
 <header class="site-header" id="top">
@@ -38,10 +40,10 @@
 <!-- ================= HERO ================= -->
 <section class="hero">
   <div class="container">
-    <p class="eyebrow">AI Transformation and Digital Infrastructure</p>
-    <h1>Intelligent systems your business <em>actually owns</em>.</h1>
+    <p class="eyebrow reveal">AI Transformation and Digital Infrastructure</p>
+    <h1 class="split">Intelligent systems your business <em>actually owns</em>.</h1>
 
-    <div class="hero-grid">
+    <div class="hero-grid reveal">
       <div></div>
       <div>
         <p class="hero-lead">
@@ -61,7 +63,7 @@
       </div>
     </div>
 
-    <div class="hero-marks">
+    <div class="hero-marks reveal">
       <div><span class="n">I</span><span class="t">Sovereign AI you own</span></div>
       <div><span class="n">II</span><span class="t">Built on your data</span></div>
       <div><span class="n">III</span><span class="t">Security by design</span></div>
@@ -93,7 +95,7 @@
   <div class="container">
     <div class="section-head reveal">
       <p class="eyebrow">Why EnLil</p>
-      <h2>The advantages of a true <em>technology partner</em></h2>
+      <h2 class="split">The advantages of a true <em>technology partner</em></h2>
       <p>We begin with how your business actually works, then build the technology that serves it.</p>
     </div>
 
@@ -133,7 +135,7 @@
 <!-- ================= BAND ================= -->
 <section class="band">
   <div class="container">
-    <blockquote class="reveal">Intelligence is the one thing a company should never rent.</blockquote>
+    <blockquote class="reveal split">Intelligence is the one thing a company should never rent.</blockquote>
     <p class="attrib reveal">The EnLil position</p>
   </div>
 </section>
@@ -143,7 +145,7 @@
   <div class="container">
     <div class="section-head reveal">
       <p class="eyebrow">What we do</p>
-      <h2>Four services, <em>one accountable partner</em></h2>
+      <h2 class="split">Four services, <em>one accountable partner</em></h2>
       <p>From strategy to support, we cover the full lifecycle so you can concentrate on running your business.</p>
     </div>
 
@@ -249,7 +251,7 @@
   <div class="container">
     <div class="section-head reveal">
       <p class="eyebrow">How we work</p>
-      <h2>A clear path from <em>idea to impact</em></h2>
+      <h2 class="split">A clear path from <em>idea to impact</em></h2>
     </div>
     <div class="steps">
       <div class="step reveal"><span class="n">01</span><h3>Discover</h3><p>We learn your business, map your systems and identify where technology can create the most value.</p></div>
@@ -265,7 +267,7 @@
   <div class="container about">
     <div class="reveal">
       <p class="eyebrow">Who we are</p>
-      <h2>A modern partner with an <em>ancient name</em></h2>
+      <h2 class="split">A modern partner with an <em>ancient name</em></h2>
       <p>In Mesopotamian mythology, Enlil was the force that set the world in motion. We took the name because that is our role for the businesses we serve: the force that gets transformation moving, and keeps it running.</p>
       <p>EnLil Technologies is an AI transformation and digital infrastructure firm. In partnership with Prax Labs, a Silicon Valley sovereign AI company, we build intelligent systems that stay yours. We pair deep technical expertise with a genuine understanding of business goals, so the technology we deliver produces results and belongs to you.</p>
       <a href="#contact" class="link">
@@ -285,7 +287,7 @@
 <!-- ================= CLOSING ================= -->
 <section class="closing" id="contact">
   <div class="container">
-    <h2>Ready to <em>own your intelligence</em>?</h2>
+    <h2 class="split">Ready to <em>own your intelligence</em>?</h2>
     <p>Tell us about your goals or your challenges, and we will take it from there. No obligation, simply a conversation.</p>
     <a href="#contact" class="btn btn-pale">
       Start the conversation
@@ -331,20 +333,120 @@
 </footer>
 
 <script>
+(function () {
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var fine = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+
   document.getElementById('year').textContent = new Date().getFullYear();
+
   var t = document.getElementById('nav-toggle'), n = document.getElementById('main-nav');
   t.addEventListener('click', function () {
-    var open = n.classList.toggle('open');
-    t.setAttribute('aria-expanded', open ? 'true' : 'false');
+    var o = n.classList.toggle('open');
+    t.setAttribute('aria-expanded', o ? 'true' : 'false');
   });
   n.addEventListener('click', function (e) { if (e.target.tagName === 'A') n.classList.remove('open'); });
-  var io = new IntersectionObserver(function (es) {
-    es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+
+  /* split headings into masked words */
+  function splitWords(el) {
+    var frag = document.createDocumentFragment();
+    (function walk(src, dst) {
+      Array.prototype.slice.call(src.childNodes).forEach(function (ch) {
+        if (ch.nodeType === 3) {
+          ch.textContent.split(/(\s+)/).forEach(function (tok) {
+            if (!tok) return;
+            if (/^\s+$/.test(tok)) { dst.appendChild(document.createTextNode(' ')); return; }
+            var outer = document.createElement('span'); outer.className = 'w';
+            var inner = document.createElement('span'); inner.textContent = tok;
+            outer.appendChild(inner); dst.appendChild(outer);
+          });
+        } else if (ch.nodeType === 1) {
+          var clone = ch.cloneNode(false); dst.appendChild(clone); walk(ch, clone);
+        }
+      });
+    })(el, frag);
+    el.innerHTML = ''; el.appendChild(frag);
+    Array.prototype.slice.call(el.querySelectorAll('.w > span')).forEach(function (sp, i) {
+      sp.style.transitionDelay = (i * 55) + 'ms';
+    });
+  }
+  if (!reduce) {
+    Array.prototype.slice.call(document.querySelectorAll('.split')).forEach(splitWords);
+  }
+
+  /* reveal on scroll */
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+    });
   }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
-  document.querySelectorAll('.reveal').forEach(function (el, i) {
-    el.style.transitionDelay = Math.min(i % 4, 3) * 90 + 'ms';
+
+  Array.prototype.slice.call(document.querySelectorAll('.reveal, .split, .srow-art')).forEach(function (el, i) {
+    if (el.classList.contains('reveal')) el.style.transitionDelay = Math.min(i % 4, 3) * 90 + 'ms';
     io.observe(el);
   });
+
+  /* scroll progress, header state, parallax */
+  var prog = document.getElementById('progress');
+  var header = document.querySelector('.site-header');
+  var arts = Array.prototype.slice.call(document.querySelectorAll('.srow-art svg'));
+
+  function parallax() {
+    if (reduce) return;
+    arts.forEach(function (svg) {
+      var r = svg.parentNode.getBoundingClientRect();
+      if (r.bottom < -100 || r.top > window.innerHeight + 100) return;
+      var p = (r.top + r.height / 2 - window.innerHeight / 2) / window.innerHeight;
+      svg.style.transform = 'translate3d(0,' + (p * -24).toFixed(2) + 'px,0)';
+    });
+  }
+  var ticking = false;
+  function onScroll() {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(function () {
+      var h = document.documentElement.scrollHeight - window.innerHeight;
+      if (prog) prog.style.width = (h > 0 ? (window.scrollY / h) * 100 : 0) + '%';
+      if (header) header.classList.toggle('small', window.scrollY > 60);
+      parallax();
+      ticking = false;
+    });
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll);
+  onScroll();
+
+  /* custom cursor and magnetic buttons */
+  if (fine && !reduce) {
+    var cur = document.getElementById('cursor');
+    var cx = window.innerWidth / 2, cy = window.innerHeight / 2, tx = cx, ty = cy;
+    document.addEventListener('mousemove', function (e) {
+      tx = e.clientX; ty = e.clientY; cur.classList.remove('hidden');
+    });
+    document.addEventListener('mouseleave', function () { cur.classList.add('hidden'); });
+    (function loop() {
+      cx += (tx - cx) * 0.2; cy += (ty - cy) * 0.2;
+      cur.style.transform = 'translate(' + cx.toFixed(1) + 'px,' + cy.toFixed(1) + 'px) translate(-50%,-50%)';
+      requestAnimationFrame(loop);
+    })();
+
+    Array.prototype.slice.call(document.querySelectorAll('a, button, .ed-item, .srow-art, .ticks li')).forEach(function (el) {
+      el.addEventListener('mouseenter', function () {
+        cur.classList.add('hover');
+        cur.classList.toggle('dark', !!el.closest('.band, .closing, .site-footer'));
+      });
+      el.addEventListener('mouseleave', function () { cur.classList.remove('hover', 'dark'); });
+    });
+
+    Array.prototype.slice.call(document.querySelectorAll('.btn')).forEach(function (b) {
+      b.addEventListener('mousemove', function (e) {
+        var r = b.getBoundingClientRect();
+        b.style.transform = 'translate(' + ((e.clientX - r.left - r.width / 2) * 0.16).toFixed(1) + 'px,' +
+                            ((e.clientY - r.top - r.height / 2) * 0.26).toFixed(1) + 'px)';
+      });
+      b.addEventListener('mouseleave', function () { b.style.transform = ''; });
+    });
+  }
+})();
 </script>
 </body>
 </html>

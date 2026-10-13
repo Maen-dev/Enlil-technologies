@@ -262,3 +262,91 @@ img, svg { max-width: 100%; display: block; }
   .steps, .footer-grid { grid-template-columns: 1fr; }
   .nav-actions .btn { padding: 13px 22px; }
 }
+
+/* ============================================================
+   Motion and interaction
+   ============================================================ */
+
+/* scroll progress */
+.progress { position: fixed; top: 0; left: 0; height: 2px; width: 0; background: var(--forest); z-index: 200; }
+
+/* custom cursor */
+.cursor {
+  position: fixed; top: 0; left: 0; width: 8px; height: 8px; border-radius: 50%;
+  background: var(--forest); pointer-events: none; z-index: 300;
+  transform: translate(-50%, -50%);
+  transition: width 0.45s var(--ease), height 0.45s var(--ease), background 0.45s var(--ease), opacity 0.3s;
+}
+.cursor.hover { width: 64px; height: 64px; background: rgba(67, 93, 75, 0.14); }
+.cursor.dark { background: rgba(221, 236, 226, 0.22); }
+.cursor.hidden { opacity: 0; }
+@media (hover: none), (pointer: coarse) { .cursor, .progress { display: none; } }
+
+/* masked word reveal */
+.w { display: inline-block; overflow: hidden; vertical-align: top; padding-bottom: 0.14em; margin-bottom: -0.14em; }
+.w > span { display: inline-block; transform: translateY(115%); transition: transform 1.05s var(--ease); }
+.split.in .w > span { transform: none; }
+
+/* masked block reveal */
+.mask { display: block; overflow: hidden; }
+.mask > span { display: block; transform: translateY(105%); opacity: 0; transition: transform 1.05s var(--ease), opacity 1.05s var(--ease); }
+.mask.in > span { transform: none; opacity: 1; }
+
+/* header shrink */
+.site-header { transition: box-shadow 0.5s var(--ease), background 0.5s var(--ease); }
+.site-header .nav-inner { transition: height 0.5s var(--ease); }
+.site-header.small .nav-inner { height: 68px; }
+.site-header.small { box-shadow: 0 1px 0 var(--line); }
+
+/* button sweep */
+.btn {
+  background-image: linear-gradient(var(--forest-deep), var(--forest-deep));
+  background-repeat: no-repeat; background-position: 50% 100%; background-size: 100% 0%;
+  transition: background-size 0.55s var(--ease), color 0.4s var(--ease), border-color 0.4s var(--ease), gap 0.4s var(--ease), transform 0.25s var(--ease);
+}
+.btn:hover { background-size: 100% 100%; }
+.btn-outline { background-image: linear-gradient(var(--forest), var(--forest)); }
+.btn-pale { background-image: linear-gradient(var(--white), var(--white)); }
+
+/* editorial row hover */
+.ed-item { position: relative; }
+.ed-item::before {
+  content: ""; position: absolute; top: 0; bottom: 0; left: -28px; right: -28px;
+  background: rgba(170, 204, 181, 0.13); opacity: 0; pointer-events: none;
+  transition: opacity 0.55s var(--ease);
+}
+.ed-item:hover::before { opacity: 1; }
+.ed-item h3, .ed-item .ed-num { transition: transform 0.55s var(--ease), color 0.4s var(--ease); }
+.ed-item:hover h3 { transform: translateX(12px); }
+.ed-item:hover .ed-num { transform: translateX(6px); }
+
+/* service art: wipe in, parallax, hover scale */
+.srow-art { clip-path: inset(0 0 100% 0); transition: clip-path 1.3s var(--ease); }
+.srow-art.in { clip-path: inset(0 0 0 0); }
+.srow-art svg { transition: transform 1.1s var(--ease); will-change: transform; }
+.srow-art:hover svg { transform: scale(1.07); }
+
+/* tick rows */
+.ticks li { transition: padding-left 0.45s var(--ease), color 0.45s var(--ease); }
+.ticks li:hover { padding-left: 14px; color: var(--forest); }
+
+/* step hover */
+.step { transition: border-color 0.5s var(--ease); }
+.step h3 { transition: color 0.45s var(--ease); }
+.step:hover { border-color: var(--forest); }
+.step:hover h3 { color: var(--forest); }
+
+/* fact rows */
+.fact { transition: padding-left 0.45s var(--ease); }
+.fact:hover { padding-left: 10px; }
+
+/* partner mark */
+.partner-mark svg { transition: transform 0.7s var(--ease); }
+.partner-mark:hover svg { transform: rotate(120deg); }
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition-duration: 0.01ms !important; }
+  .w > span, .mask > span { transform: none !important; opacity: 1 !important; }
+  .srow-art { clip-path: none !important; }
+  .cursor { display: none; }
+}

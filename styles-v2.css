@@ -418,3 +418,73 @@ img, svg { max-width: 100%; display: block; }
 @media (max-width: 860px) { .marks-row { grid-template-columns: repeat(2, 1fr); gap: 18px 24px; } }
 @media (max-width: 520px) { .marks-row { grid-template-columns: 1fr; } }
 @media (prefers-reduced-motion: reduce) { .hero-canvas { animation: none !important; } }
+
+/* ============================================================
+   Phone: compact, less scrolling between the reader and the content
+   ============================================================ */
+@media (max-width: 760px) {
+  body { font-size: 1rem; line-height: 1.7; }
+
+  /* hero */
+  .hero { padding-top: 44px; }
+  .hero h1 { font-size: clamp(2.1rem, 9vw, 2.9rem); }
+  .hero-grid { margin-top: 26px; padding-bottom: 36px; gap: 26px; }
+  .hero-grid > div:first-child { display: none; }
+  .hero-lead { margin-bottom: 24px; }
+  .hero-actions { gap: 18px; }
+
+  /* bands between sections */
+  .marks { padding: 22px 0; }
+  .marks-row { grid-template-columns: repeat(2, 1fr); gap: 12px 18px; }
+  .partner-line { padding: 26px 0; }
+  .partner-line .container { gap: 16px; }
+
+  /* sections */
+  .section { padding: 52px 0; }
+  .section-head { margin-bottom: 30px; }
+  .section-head h2 { font-size: clamp(1.6rem, 6.4vw, 2rem); }
+  .section-head p { font-size: 0.97rem; }
+
+  /* principles */
+  .ed-item { padding: 22px 0; gap: 6px 18px; grid-template-columns: 38px 1fr; }
+  .ed-item h3 { font-size: 1.14rem; }
+  .ed-item p { font-size: 0.95rem; }
+  .ed-item::before { left: -22px; right: -22px; }
+
+  /* services */
+  .srow { padding: 38px 0; gap: 22px; }
+  .srow h3 { font-size: 1.45rem; }
+  .srow p { margin-bottom: 18px; font-size: 0.97rem; }
+  .srow-art { aspect-ratio: auto; height: 120px; }
+  .ticks li { padding: 10px 0; font-size: 0.93rem; }
+
+  /* statement and closing */
+  .band, .closing { padding: 58px 0; }
+  .band blockquote { font-size: clamp(1.4rem, 6.6vw, 1.9rem); max-width: 20ch; }
+  .band .attrib { margin-top: 24px; }
+  .closing p { margin-bottom: 30px; }
+  .closing .mail { margin-top: 24px; font-size: 1.05rem; }
+
+  /* process: two across rather than a single stack */
+  .steps { grid-template-columns: repeat(2, 1fr); gap: 0 20px; }
+  .step { padding: 26px 0 0; }
+  .step h3 { font-size: 1.1rem; }
+  .step p { font-size: 0.9rem; }
+
+  /* about */
+  .about { gap: 30px; }
+  .fact { padding: 17px 0; }
+
+  /* footer */
+  .site-footer { padding: 48px 0 24px; }
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 26px; }
+  .footer-brand { grid-column: 1 / -1; }
+  .footer-col h4 { margin-bottom: 14px; }
+  .footer-col a { margin-bottom: 9px; }
+  .footer-bottom { margin-top: 34px; padding-top: 18px; }
+}
+
+@media (max-width: 380px) {
+  .marks-row { grid-template-columns: 1fr; }
+  .steps { grid-template-columns: 1fr; }
+}

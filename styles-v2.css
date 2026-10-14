@@ -154,14 +154,14 @@ img, svg { max-width: 100%; display: block; }
 
 /* ---------- Editorial numbered list ---------- */
 .ed-item {
-  display: grid; grid-template-columns: 66px 1fr 1.2fr; gap: 28px;
-  padding: 25px 0; border-top: 1px solid var(--line);
+  display: grid; grid-template-columns: 56px 1fr 1.25fr; gap: 24px;
+  padding: 17px 0; border-top: 1px solid var(--line);
   transition: background 0.5s var(--ease);
 }
 .ed-item:last-child { border-bottom: 1px solid var(--line); }
-.ed-num { font-family: "Sora", system-ui, sans-serif; font-size: 0.82rem; color: var(--forest); letter-spacing: 0.08em; padding-top: 6px; }
-.ed-item h3 { font-size: 1.08rem; font-weight: 400; margin: 0; }
-.ed-item p { margin: 0; font-size: 0.89rem; }
+.ed-num { font-family: "Sora", system-ui, sans-serif; font-size: 0.74rem; color: var(--forest); letter-spacing: 0.08em; padding-top: 5px; }
+.ed-item h3 { font-size: 1.01rem; font-weight: 400; margin: 0; line-height: 1.35; }
+.ed-item p { margin: 0; font-size: 0.855rem; line-height: 1.6; }
 
 /* ---------- Service rows ---------- */
 .srow { display: grid; grid-template-columns: 1fr 1fr; gap: 90px; align-items: center; padding: 104px 0; border-top: 1px solid var(--line); }
@@ -237,7 +237,7 @@ img, svg { max-width: 100%; display: block; }
   .srow.reverse .srow-copy, .srow.reverse .srow-art { order: 0; }
   .about { grid-template-columns: 1fr; gap: 50px; }
   .steps { grid-template-columns: repeat(2, 1fr); }
-  .ed-item { grid-template-columns: 60px 1fr; gap: 24px; }
+  .ed-item { grid-template-columns: 52px 1fr; gap: 6px 22px; }
   .ed-item p { grid-column: 2; }
   .hero-marks { grid-template-columns: repeat(2, 1fr); }
   .hero-marks div { padding-bottom: 30px; }
@@ -446,9 +446,9 @@ img, svg { max-width: 100%; display: block; }
   .section-head p { font-size: 0.97rem; }
 
   /* principles */
-  .ed-item { padding: 22px 0; gap: 6px 18px; grid-template-columns: 38px 1fr; }
-  .ed-item h3 { font-size: 1.14rem; }
-  .ed-item p { font-size: 0.95rem; }
+  .ed-item { padding: 16px 0; gap: 4px 16px; grid-template-columns: 34px 1fr; }
+  .ed-item h3 { font-size: 1.02rem; }
+  .ed-item p { font-size: 0.88rem; line-height: 1.55; }
   .ed-item::before { left: -22px; right: -22px; }
 
   /* services */

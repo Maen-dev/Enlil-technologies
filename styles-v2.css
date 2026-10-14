@@ -359,23 +359,43 @@ img, svg { max-width: 100%; display: block; }
 .hero { position: relative; overflow: hidden; background: var(--forest-deep); }
 .hero::before { display: none; }
 
-.hero-canvas { position: absolute; inset: -35%; z-index: 0; filter: blur(72px); pointer-events: none; animation: canvasTurn 120s linear infinite; }
+.hero-canvas { position: absolute; inset: -26%; z-index: 0; filter: blur(58px); pointer-events: none; animation: canvasTurn 150s linear infinite; }
 @keyframes canvasTurn { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
 .hero-canvas i {
   position: absolute; display: block; border-radius: 50%;
   mix-blend-mode: screen; will-change: transform;
 }
-.hero-canvas .b1 { width: 62vw; height: 62vw; left: -12%; top: -8%;  background: #5c8f6c; animation: drift1 30s var(--ease) infinite alternate; }
-.hero-canvas .b2 { width: 52vw; height: 52vw; left: 44%;  top: 6%;   background: #aaccb5; animation: drift2 38s var(--ease) infinite alternate; }
-.hero-canvas .b3 { width: 46vw; height: 46vw; left: 8%;   top: 46%;  background: #7fb892; animation: drift3 26s var(--ease) infinite alternate; }
-.hero-canvas .b4 { width: 34vw; height: 34vw; left: 56%;  top: 36%;  background: #e8f3ec; opacity: 0.75; animation: drift4 34s var(--ease) infinite alternate; }
-.hero-canvas .b5 { width: 58vw; height: 58vw; left: 62%;  top: -14%; background: #3f6b4e; animation: drift5 42s var(--ease) infinite alternate; }
+.hero-canvas .b1 { width: 54vw; height: 54vw; left: -10%; top: -6%;  background: #5c8f6c; animation: drift1 34s var(--ease) infinite alternate; }
+.hero-canvas .b2 { width: 46vw; height: 46vw; left: 42%;  top: 4%;   background: #aaccb5; animation: drift2 44s var(--ease) infinite alternate; }
+.hero-canvas .b3 { width: 42vw; height: 42vw; left: 6%;   top: 44%;  background: #7fb892; animation: drift3 30s var(--ease) infinite alternate; }
+.hero-canvas .b4 { width: 30vw; height: 30vw; left: 54%;  top: 34%;  background: #e8f3ec; opacity: 0.75; animation: drift4 38s var(--ease) infinite alternate; }
+.hero-canvas .b5 { width: 50vw; height: 50vw; left: 60%;  top: -12%; background: #3f6b4e; animation: drift5 48s var(--ease) infinite alternate; }
 
-@keyframes drift1 { from { transform: translate3d(-8%, -6%, 0) scale(1) rotate(0deg); } to { transform: translate3d(32%, 24%, 0) scale(1.35) rotate(25deg); } }
-@keyframes drift2 { from { transform: translate3d(10%, -4%, 0) scale(1.2) rotate(0deg); } to { transform: translate3d(-34%, 30%, 0) scale(0.85) rotate(-30deg); } }
-@keyframes drift3 { from { transform: translate3d(-6%, 8%, 0) scale(0.9) rotate(0deg); } to { transform: translate3d(42%, -34%, 0) scale(1.4) rotate(35deg); } }
-@keyframes drift4 { from { transform: translate3d(12%, 10%, 0) scale(0.95); } to { transform: translate3d(-44%, -28%, 0) scale(1.45); } }
-@keyframes drift5 { from { transform: translate3d(6%, -8%, 0) scale(1.15) rotate(0deg); } to { transform: translate3d(-30%, 36%, 0) scale(0.82) rotate(-22deg); } }
+@keyframes drift1 {
+  0%   { transform: translate3d(-18%, -14%, 0) scale(1.00) rotate(0deg); }
+  50%  { transform: translate3d(20%, 14%, 0)   scale(1.26) rotate(16deg); }
+  100% { transform: translate3d(56%, 38%, 0)   scale(1.06) rotate(32deg); }
+}
+@keyframes drift2 {
+  0%   { transform: translate3d(18%, -10%, 0) scale(1.18) rotate(0deg);   opacity: 0.82; }
+  50%  { transform: translate3d(-16%, 20%, 0) scale(0.90) rotate(-16deg); opacity: 1; }
+  100% { transform: translate3d(-52%, 42%, 0) scale(1.22) rotate(-36deg); opacity: 0.8; }
+}
+@keyframes drift3 {
+  0%   { transform: translate3d(-12%, 16%, 0) scale(0.86) rotate(0deg); }
+  50%  { transform: translate3d(22%, -14%, 0) scale(1.24) rotate(20deg); }
+  100% { transform: translate3d(60%, -46%, 0) scale(1.44) rotate(40deg); }
+}
+@keyframes drift4 {
+  0%   { transform: translate3d(20%, 18%, 0)   scale(0.88); opacity: 0.58; }
+  50%  { transform: translate3d(-14%, -4%, 0)  scale(1.24); opacity: 0.88; }
+  100% { transform: translate3d(-58%, -40%, 0) scale(1.52); opacity: 0.6; }
+}
+@keyframes drift5 {
+  0%   { transform: translate3d(12%, -14%, 0) scale(1.12) rotate(0deg); }
+  50%  { transform: translate3d(-12%, 16%, 0) scale(0.96) rotate(-12deg); }
+  100% { transform: translate3d(-46%, 48%, 0) scale(0.78) rotate(-28deg); }
+}
 
 /* hero type on the dark canvas */
 .hero .eyebrow { color: rgba(221, 236, 226, 0.72); }
@@ -398,10 +418,10 @@ img, svg { max-width: 100%; display: block; }
 .hero::after {
   content: ""; position: absolute; inset: 0; z-index: 1; pointer-events: none;
   background: linear-gradient(104deg,
-    rgba(31, 48, 38, 0.86) 0%,
-    rgba(31, 48, 38, 0.62) 40%,
-    rgba(31, 48, 38, 0.14) 72%,
-    rgba(31, 48, 38, 0) 100%);
+    rgba(31, 48, 38, 0.88) 0%,
+    rgba(31, 48, 38, 0.60) 36%,
+    rgba(31, 48, 38, 0.10) 68%,
+    rgba(31, 48, 38, 0) 94%);
 }
 .hero .container { z-index: 3; }
 .hero h1 em { color: #c4e0ce; }

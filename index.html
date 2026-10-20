@@ -3,17 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>EnLil Technologies · AI Transformation and Digital Infrastructure</title>
+  <title>EnLil Technologies Â· AI Transformation and Digital Infrastructure</title>
   <meta name="description" content="EnLil Technologies builds artificial intelligence that belongs to the business using it, trained on your own data and kept behind your own walls, together with the infrastructure and security beneath it. In partnership with Prax Labs." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@200;300;400;500;600&family=Inter:wght@400;450;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles-v2.css?v=20261013p" />
+  <link rel="stylesheet" href="styles-v2.css?v=20261020a" />
   <link rel="icon" type="image/png" href="assets/favicon.png" />
 </head>
 <body>
 <div class="progress" id="progress"></div>
-<div class="cursor" id="cursor"></div>
 
 <!-- ================= HEADER ================= -->
 <header class="site-header" id="top">
@@ -436,28 +435,8 @@
   window.addEventListener('resize', onScroll);
   onScroll();
 
-  /* custom cursor and magnetic buttons */
+  /* magnetic buttons */
   if (fine && !reduce) {
-    var cur = document.getElementById('cursor');
-    var cx = window.innerWidth / 2, cy = window.innerHeight / 2, tx = cx, ty = cy;
-    document.addEventListener('mousemove', function (e) {
-      tx = e.clientX; ty = e.clientY; cur.classList.remove('hidden');
-    });
-    document.addEventListener('mouseleave', function () { cur.classList.add('hidden'); });
-    (function loop() {
-      cx += (tx - cx) * 0.2; cy += (ty - cy) * 0.2;
-      cur.style.transform = 'translate(' + cx.toFixed(1) + 'px,' + cy.toFixed(1) + 'px) translate(-50%,-50%)';
-      requestAnimationFrame(loop);
-    })();
-
-    Array.prototype.slice.call(document.querySelectorAll('a, button, .ed-item, .svc, .ticks li, .rail-btn')).forEach(function (el) {
-      el.addEventListener('mouseenter', function () {
-        cur.classList.add('hover');
-        cur.classList.toggle('dark', !!el.closest('.band, .closing, .site-footer'));
-      });
-      el.addEventListener('mouseleave', function () { cur.classList.remove('hover', 'dark'); });
-    });
-
     Array.prototype.slice.call(document.querySelectorAll('.btn')).forEach(function (b) {
       b.addEventListener('mousemove', function (e) {
         var r = b.getBoundingClientRect();

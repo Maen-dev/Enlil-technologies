@@ -1,6 +1,6 @@
 /* ============================================================
-   EnLil Technologies — styles-v2.css
-   Editorial redesign. Charcoal · Forest #435d4b · Sage #aaccb5 · Pale Sage #ddece2
+   EnLil Technologies â€” styles-v2.css
+   Editorial redesign. Charcoal Â· Forest #435d4b Â· Sage #aaccb5 Â· Pale Sage #ddece2
    ============================================================ */
 
 :root {
@@ -271,17 +271,7 @@ img, svg { max-width: 100%; display: block; }
 /* scroll progress */
 .progress { position: fixed; top: 0; left: 0; height: 2px; width: 0; background: var(--forest); z-index: 200; }
 
-/* custom cursor */
-.cursor {
-  position: fixed; top: 0; left: 0; width: 8px; height: 8px; border-radius: 50%;
-  background: var(--forest); pointer-events: none; z-index: 300;
-  transform: translate(-50%, -50%);
-  transition: width 0.45s var(--ease), height 0.45s var(--ease), background 0.45s var(--ease), opacity 0.3s;
-}
-.cursor.hover { width: 64px; height: 64px; background: rgba(67, 93, 75, 0.14); }
-.cursor.dark { background: rgba(221, 236, 226, 0.22); }
-.cursor.hidden { opacity: 0; }
-@media (hover: none), (pointer: coarse) { .cursor, .progress { display: none; } }
+@media (hover: none), (pointer: coarse) { .progress { display: none; } }
 
 /* masked word reveal */
 .w { display: inline-block; overflow: hidden; vertical-align: top; padding-bottom: 0.14em; margin-bottom: -0.14em; }
@@ -352,7 +342,6 @@ img, svg { max-width: 100%; display: block; }
   * { animation: none !important; transition-duration: 0.01ms !important; }
   .w > span, .mask > span { transform: none !important; opacity: 1 !important; }
   .srow-art::after { display: none !important; }
-  .cursor { display: none; }
 }
 
 /* ============================================================

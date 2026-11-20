@@ -146,14 +146,6 @@ img, svg { max-width: 100%; display: block; }
 .section-head h2 em { font-style: normal; color: var(--forest); font-weight: 400; }
 .section-head p { font-size: 0.98rem; margin: 0; max-width: 560px; }
 
-/* ---------- Partner line ---------- */
-.partner-line { padding: 46px 0; border-top: 1px solid var(--line-soft); border-bottom: 1px solid var(--line-soft); }
-.partner-line .container { display: flex; align-items: center; justify-content: space-between; gap: 30px; flex-wrap: wrap; }
-.partner-line .label { font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.3em; color: var(--muted); }
-.partner-mark { display: inline-flex; align-items: center; gap: 16px; }
-.partner-mark .name { font-family: "Sora", system-ui, sans-serif; font-size: 1.12rem; color: var(--ink); }
-.partner-mark .sub { font-size: 0.84rem; color: var(--muted); }
-
 /* ---------- Editorial numbered list ---------- */
 .ed-item {
   display: grid; grid-template-columns: 56px 1fr 1.25fr; gap: 24px;
@@ -334,10 +326,6 @@ img, svg { max-width: 100%; display: block; }
 .fact { transition: padding-left 0.45s var(--ease); }
 .fact:hover { padding-left: 10px; }
 
-/* partner mark */
-.partner-mark svg { transition: transform 0.7s var(--ease); }
-.partner-mark:hover svg { transform: rotate(120deg); }
-
 @media (prefers-reduced-motion: reduce) {
   * { animation: none !important; transition-duration: 0.01ms !important; }
   .w > span, .mask > span { transform: none !important; opacity: 1 !important; }
@@ -446,8 +434,6 @@ img, svg { max-width: 100%; display: block; }
   /* bands between sections */
   .marks { padding: 22px 0; }
   .marks-row { grid-template-columns: repeat(2, 1fr); gap: 12px 18px; }
-  .partner-line { padding: 26px 0; }
-  .partner-line .container { gap: 16px; }
 
   /* sections */
   .section { padding: 52px 0; }

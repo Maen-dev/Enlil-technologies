@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@200;300;400;500;600&family=Inter:wght@400;450;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles-v2.css?v=20261120a" />
+  <link rel="stylesheet" href="styles-v2.css?v=20261120b" />
   <link rel="icon" type="image/png" href="assets/favicon.png" />
 </head>
 <body>
@@ -24,6 +24,19 @@
       <a href="#principles">Principles</a>
       <a href="#services">Services</a>
       <a href="#process">Process</a>
+      <div class="nav-drop" id="nav-drop">
+        <button class="nav-drop-btn" type="button" aria-expanded="false" aria-controls="products-menu">
+          Products
+          <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="drop-panel" id="products-menu">
+          <a href="#contact"><span class="dt">Banking and Finance</span><span class="dd">Private AI for banks, insurers and fintechs</span></a>
+          <a href="https://nubpro.com" target="_blank" rel="noopener"><span class="dt">NubPro <svg class="ext" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></span><span class="dd">Students: our study app</span></a>
+          <a href="#contact"><span class="dt">Construction and Engineering</span><span class="dd">Project documents, knowledge and site reporting</span></a>
+          <a href="#contact"><span class="dt">Retail</span><span class="dd">Sales, inventory and customer insight</span></a>
+          <a href="#contact"><span class="dt">Legal</span><span class="dd">Grounded legal research and contract review</span></a>
+        </div>
+      </div>
       <a href="#about">About</a>
     </nav>
     <div class="nav-actions">
@@ -345,7 +358,12 @@
     var o = n.classList.toggle('open');
     t.setAttribute('aria-expanded', o ? 'true' : 'false');
   });
-  n.addEventListener('click', function (e) { if (e.target.tagName === 'A') n.classList.remove('open'); });
+  var dw = document.getElementById('nav-drop'), db = dw.querySelector('.nav-drop-btn');
+  function setDrop(o) { dw.classList.toggle('open', o); db.setAttribute('aria-expanded', o ? 'true' : 'false'); }
+  db.addEventListener('click', function (e) { e.stopPropagation(); setDrop(!dw.classList.contains('open')); });
+  document.addEventListener('click', function (e) { if (!dw.contains(e.target)) setDrop(false); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') { setDrop(false); db.blur(); } });
+  n.addEventListener('click', function (e) { var a = e.target.closest('a'); if (a) { n.classList.remove('open'); t.setAttribute('aria-expanded', 'false'); setDrop(false); } });
 
   /* split headings into masked words */
   function splitWords(el) {

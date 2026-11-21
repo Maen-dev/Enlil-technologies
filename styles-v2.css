@@ -112,44 +112,72 @@ img, svg { max-width: 100%; display: block; }
 }
 .main-nav a:hover { color: var(--forest); }
 .main-nav a:hover::after { right: 0; }
-/* Products dropdown (horizontal panel) */
+/* Products dropdown: full width editorial band under the header */
+.site-header .nav-inner { position: static; }
 .nav-drop { position: static; }
 .nav-drop-btn {
   position: relative; display: inline-flex; align-items: center; gap: 5px; background: none; border: 0; cursor: pointer;
   font: inherit; font-size: 0.82rem; letter-spacing: 0.06em; color: var(--body); font-weight: 450;
   padding: 3px 0; transition: color 0.35s var(--ease);
 }
-.nav-drop-btn::after { content: ""; position: absolute; left: -12px; right: -12px; top: 100%; height: 34px; }
-.nav-drop-btn .chev { width: 13px; height: 13px; transition: transform 0.35s var(--ease); }
-.nav-drop-btn:hover, .nav-drop.open .nav-drop-btn { color: var(--forest); }
+.nav-drop-btn::before {
+  content: ""; position: absolute; left: 0; right: 100%; bottom: 0; height: 1px;
+  background: var(--forest); transition: right 0.5s var(--ease);
+}
+.nav-drop-btn::after { content: ""; position: absolute; left: -14px; right: -14px; top: 100%; height: 36px; }
+.nav-drop-btn .chev { width: 12px; height: 12px; transition: transform 0.45s var(--ease); }
+.nav-drop.open .nav-drop-btn { color: var(--forest); }
+.nav-drop.open .nav-drop-btn::before { right: 0; }
 .nav-drop.open .chev { transform: rotate(180deg); }
 .drop-panel {
-  position: absolute; top: 100%; left: 32px; right: 32px;
-  display: grid; grid-template-columns: repeat(7, minmax(0, 1fr));
-  transform: translateY(-6px); opacity: 0; visibility: hidden;
-  background: var(--white); border: 1px solid var(--line); border-radius: 2px;
-  box-shadow: 0 22px 48px rgba(39, 57, 46, 0.13); padding: 10px;
-  transition: opacity 0.3s var(--ease), transform 0.3s var(--ease), visibility 0.3s;
+  position: absolute; top: 100%; left: 0; right: 0;
+  background: var(--bone); border-top: 1px solid var(--line-soft); border-bottom: 1px solid var(--line);
+  box-shadow: 0 40px 60px -40px rgba(39, 57, 46, 0.22);
+  opacity: 0; visibility: hidden; clip-path: inset(0 0 100% 0);
+  transition: opacity 0.45s var(--ease), clip-path 0.6s var(--ease), visibility 0.6s;
 }
-.nav-drop.open .drop-panel { opacity: 1; visibility: visible; transform: translateY(0); }
+.nav-drop.open .drop-panel { opacity: 1; visibility: visible; clip-path: inset(0 0 -80px 0); }
 @media (hover: hover) and (min-width: 721px) {
-  .nav-drop:hover .drop-panel { opacity: 1; visibility: visible; transform: translateY(0); }
-  .nav-drop:hover .chev { transform: rotate(180deg); }
   .nav-drop:hover .nav-drop-btn { color: var(--forest); }
+  .nav-drop:hover .nav-drop-btn::before { right: 0; }
+  .nav-drop:hover .chev { transform: rotate(180deg); }
+  .nav-drop:hover .drop-panel { opacity: 1; visibility: visible; clip-path: inset(0 0 -80px 0); }
 }
-.main-nav .drop-panel a {
-  display: block; padding: 16px 16px 18px; letter-spacing: 0; border-radius: 2px;
-  border-left: 1px solid var(--line-soft); transition: background 0.25s var(--ease);
+.drop-panel > .container { padding-top: 30px; padding-bottom: 34px; }
+.drop-head { display: flex; align-items: baseline; justify-content: space-between; gap: 24px; margin-bottom: 20px; }
+.drop-head .eyebrow { margin: 0; }
+.drop-note { font-size: 0.82rem; color: var(--muted); }
+.drop-grid { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); border-top: 1px solid var(--line); }
+.main-nav .drop-grid a {
+  position: relative; display: block; padding: 20px 18px 22px; letter-spacing: 0;
+  border-left: 1px solid var(--line-soft); color: inherit;
 }
-.main-nav .drop-panel a:first-child { border-left: 0; }
-.main-nav .drop-panel a::after { display: none; }
-.main-nav .drop-panel a:hover { background: var(--sage-pale); }
-.drop-panel .dt { display: flex; align-items: center; gap: 6px; font-size: 0.84rem; color: var(--ink); font-weight: 500; line-height: 1.3; }
-.drop-panel .dd { display: block; margin-top: 6px; font-size: 0.74rem; color: var(--muted); line-height: 1.5; }
-.drop-panel .ext { width: 12px; height: 12px; color: var(--forest); flex: none; }
+.main-nav .drop-grid a:first-child { border-left: 0; padding-left: 0; }
+.main-nav .drop-grid a::after {
+  content: ""; position: absolute; left: 0; right: 0; top: -1px; bottom: auto; height: 1px;
+  background: var(--forest); transform: scaleX(0); transform-origin: left; transition: transform 0.55s var(--ease);
+}
+.main-nav .drop-grid a:hover::after { transform: scaleX(1); right: 0; }
+.drop-grid .dn {
+  display: block; font-family: "Sora", system-ui, sans-serif; font-size: 0.72rem; letter-spacing: 0.14em;
+  color: var(--forest); margin-bottom: 14px; transition: transform 0.55s var(--ease);
+}
+.drop-grid .dt {
+  display: flex; align-items: center; gap: 8px; font-family: "Sora", system-ui, sans-serif;
+  font-size: 0.92rem; font-weight: 400; color: var(--ink); line-height: 1.35;
+  transition: transform 0.55s var(--ease), color 0.4s var(--ease);
+}
+.drop-grid .dd { display: block; margin-top: 8px; font-size: 0.78rem; color: var(--muted); line-height: 1.55; }
+.drop-grid .go { width: 13px; height: 13px; flex: none; color: var(--forest); opacity: 0; transform: translateX(-6px); transition: opacity 0.4s var(--ease), transform 0.5s var(--ease); }
+.drop-grid .go.ext { opacity: 1; transform: none; }
+.drop-grid a:hover .dt { color: var(--forest); transform: translateX(4px); }
+.drop-grid a:hover .dn { transform: translateX(4px); }
+.drop-grid a:hover .go { opacity: 1; transform: translateX(0); }
 @media (max-width: 1080px) and (min-width: 721px) {
-  .drop-panel { grid-template-columns: repeat(4, minmax(0, 1fr)); }
-  .main-nav .drop-panel a:nth-child(5) { border-left: 0; }
+  .drop-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .main-nav .drop-grid a:nth-child(5) { border-left: 0; padding-left: 0; }
+  .main-nav .drop-grid a:nth-child(n+5) { border-top: 1px solid var(--line-soft); }
+  .drop-note { display: none; }
 }
 
 .nav-actions { display: flex; align-items: center; gap: 18px; }
@@ -280,7 +308,7 @@ img, svg { max-width: 100%; display: block; }
 @media (max-width: 720px) {
   .container { padding: 0 22px; }
   .main-nav {
-    position: absolute; top: 92px; left: 0; right: 0; display: none;
+    position: absolute; top: 100%; left: 0; right: 0; display: none;
     flex-direction: column; align-items: flex-start; gap: 0;
     background: var(--bone); border-bottom: 1px solid var(--line); padding: 12px 22px 22px;
   }
@@ -288,14 +316,21 @@ img, svg { max-width: 100%; display: block; }
   .main-nav a { padding: 13px 0; width: 100%; }
   .nav-drop { width: 100%; }
   .nav-drop-btn { width: 100%; justify-content: space-between; padding: 13px 0; }
+  .nav-drop-btn::before, .nav-drop-btn::after { display: none; }
   .drop-panel {
-    position: static; display: none; grid-template-columns: 1fr; transform: none; box-shadow: none; border: 0;
-    border-left: 1px solid var(--line); margin: 0 0 8px 2px; padding: 0 0 0 14px;
-    opacity: 1; visibility: visible; background: transparent;
+    position: static; display: none; box-shadow: none; border: 0; background: transparent;
+    opacity: 1; visibility: visible; clip-path: none; margin: 0 0 10px;
   }
-  .nav-drop.open .drop-panel { display: grid; transform: none; }
-  .main-nav .drop-panel a { padding: 9px 0; width: 100%; border-left: 0; }
-  .main-nav .drop-panel a:hover { background: none; }
+  .nav-drop.open .drop-panel { display: block; clip-path: none; }
+  .drop-panel > .container { padding: 0; }
+  .drop-head { display: none; }
+  .drop-grid { grid-template-columns: 1fr; border-top: 0; border-left: 1px solid var(--line); padding-left: 16px; }
+  .main-nav .drop-grid a, .main-nav .drop-grid a:first-child { padding: 10px 0; border-left: 0; display: grid; grid-template-columns: 30px 1fr; column-gap: 4px; }
+  .main-nav .drop-grid a::after { display: none; }
+  .drop-grid .dn { margin: 3px 0 0; grid-row: span 2; }
+  .drop-grid .dd { margin-top: 3px; }
+  .drop-grid .go { display: none; }
+  .drop-grid .go.ext { display: block; }
   .nav-toggle { display: flex; }
   .nav-inner { height: 58px; }
   .brand-logo { height: 27px; }
